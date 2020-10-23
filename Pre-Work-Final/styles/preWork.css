@@ -1,0 +1,176 @@
+/* This entire page is made as part of the Per Scholas, Software Engineering Course Pre-work.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-image: url("../images/Morning \Time.jpg");
+    background-repeat: no-repeat;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    background-size: cover;
+}
+body {
+    background: linear-gradient(45deg, rgba(200, 10, 10, 0.25), rgba(76, 80, 4, 0.25));
+}
+.capitalize {
+    text-transform: capitalize;
+}
+nav {
+    position: fixed;
+    top: 3.5%;
+    left: 3%;
+}
+.a {
+    font-size: 1.2rem;
+    background: rgba(49, 87, 124, 0.35);
+    color: purple;
+    font-weight: bolder;
+    margin: auto 0.5rem auto;
+    padding: 0.5rem;
+    border-radius: 20%;
+    height: 100%;
+}
+.generalSpacing {
+    margin: 1rem;
+    padding: 0.25rem;
+}
+.generalMargin {
+    margin: 4rem;
+}
+.h3 {
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+    text-decoration: underline dotted;
+    font-weight: bold;
+}
+.center {
+    text-align: center;
+}
+#mainHeading {
+    margin: 2.5rem auto;
+    color: rgb(10, 233, 10);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    text-decoration: underline;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+#githubLink {
+    text-transform: uppercase;
+}
+.listSpacing{
+    margin: 6rem;
+    text-align: justify;
+}
+#orderedListPosition {
+    color: purple;
+    font-size: 1.5rem;
+    font-style: italic;
+    position: absolute;
+    left: 45%;
+    top: 65%;
+}
+@media screen and (max-width: 68rem) {
+    #orderedListPosition {
+    top: 68%;
+    }
+} 
+@media screen and (max-width: 60rem) {
+    #orderedListPosition {
+    position: static;
+    }
+    .listSpacing {
+    margin: 2rem;
+    }
+}
+@media screen and (max-height: 37rem) {
+    #orderedListPosition {
+        position: static;
+    }
+    .listSpacing {
+    margin: 2rem;
+    }
+}
+#mainImg {
+    margin: 2rem auto;
+    height: 100vh;
+}
+.input {
+    color: black;
+    height: 2rem;
+    width: 50%;
+    font-size: 1.2rem;
+    transition: all 0.5s ease-in-out;
+}
+.input:hover {
+    background: rgb(241, 241, 241);
+}
+.input:focus {
+    background: rgb(188, 233, 177);
+}
+@media screen and (max-width: 60rem) {
+    .input {
+    width: 70%;
+    }
+}
+@media screen and (max-width: 50rem) {
+    .input {
+    width: 100%;
+    }
+}
+#textArea {
+    color: black;
+    font-size: 1.5rem;
+    transition: all 1s ease-in-out; 
+}
+#textArea:hover {
+    background: rgb(241, 241, 241);
+}
+#textArea:focus {
+    background: rgb(188, 233, 177);
+}
+#radioSpacing {
+    font-size: 1.3rem;
+    margin: auto auto auto 33%;
+}
+#submit {
+    margin: 1rem auto;
+    padding: 0.5rem 1rem 0.5rem;
+    border: none;
+    border-radius: 10%;
+    outline: none;
+    font-size: 1.5rem;
+    box-shadow: 0.5rem 0.25rem 1rem green, 0.5rem -0.25rem 1rem red, -0.25rem 0rem 1rem blue;
+    cursor: pointer;
+}
+p {
+    font-size: 1.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: dodgerblue;
+}
+#fortImg {
+    width: 10vw;
+    margin: 0rem auto 1rem;
+}
+#powerTable {
+    margin: auto 20% auto;
+}
+.tableNumberSpacing {
+    text-align: right; 
+    padding-right: 0.5rem;
+}
+form {
+    border: solid 0.5rem rgba(255, 255, 0, 0.5);
+    padding: 1rem;
+    margin: 1rem 28% 1rem;
+}
+label {
+    font-size: 1.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: dodgerblue;
+}
