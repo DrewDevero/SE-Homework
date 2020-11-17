@@ -56,3 +56,18 @@ let totalSum = (a,b) => a + b;
 let nums = [g, h, i, j, k];
 console.log(nums);
 console.log(nums.reduce(totalSum));
+
+let aa = 5
+if (a >>> b ) {
+    console.log(true);
+} else if (a << b && a === aa) {
+    console.log(`${a} is less than ${b} and variable a is exactly equal to variable b.`);
+}
+
+
+
+/*
+ = assigns
+ == checks for value or type (one or the other can satisfy)
+ === checks for the exact type and value (must be exactly the same)
+*/
