@@ -1,0 +1,87 @@
+/* Per Scholas learning and testing html and css */
+
+nav {
+    background:  lightgrey;
+    margin-right: 65rem;
+    border-radius: 5%;
+    display: flex;
+    justify-content: flex-start;
+    position: sticky;
+    animation: navStretch 2s forwards;
+}
+#home {
+      margin: 1rem;
+}
+#resume {
+      margin: 1rem;
+}
+#projects {
+      margin: 1rem;
+}
+@keyframes navStretch {
+    0% {
+    margin-right: 65rem;
+    justify-content: flex-start;
+  }
+  100% {
+    margin-right: 0rem;
+    justify-content: space-between;
+  }
+}
+p {
+    font-size: 1rem;
+}
+#parent {
+    border: solid red 3px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.children {
+    height: 300px;
+    width: 10%; 
+    background: orange;
+    margin: 2px;
+    border-radius: 50%;
+    transition: border-radius 1s ease-in-out;
+}
+@media screen and (min-width: 75rem) {
+    .children {
+        border-radius: 0%;
+    }
+}
+#crazyBox {
+    background: lightblue;
+    height: 300px;
+    width: 50%;
+    animation: growHeight 2s infinite;
+}
+@keyframes growHeight {
+    50% {
+        height: 10rem;
+    }
+    100% {
+        height: 20rem;
+    }
+}
+#first {
+    order: 3;
+}
+#second {
+    order: 4;
+}
+#third {
+    order: 7
+}
+#fourth {
+    order: 1
+}
+#fifth {
+    order: 2
+}
+#sixth {
+    order: 5
+}
+#seventh {
+    order: 6
+}

@@ -1,0 +1,85 @@
+.child {
+    background: grey;
+}
+.parent-1 {
+    display: grid;
+    grid-template-columns: 10rem 10rem 10rem;
+    grid-template-rows: 10rem 10rem;
+    gap: 1rem 1rem;
+    justify-content: center;
+    margin: 3rem;
+}
+.child-1 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+.child-2 {
+    grid-column: 3/4;
+    grid-row: 1/3;
+}
+.child-3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.child-4 {
+    grid-column:2/3;
+    grid-row: 2/3;
+}
+.child {
+    background: grey;
+}
+.parent-2 {
+    display: grid;
+    grid-template-columns: 10rem 10rem 10rem 10rem;
+    grid-template-rows: 10rem 10rem 10rem;
+    gap: 1rem 1rem;
+    justify-content: center;
+    margin: 3rem;
+}
+.child-5 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+.child-6 {
+    grid-column: 3/5;
+    grid-row: 1/2;
+}
+.child-7 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.child-8 {
+    grid-column:2/5;
+    grid-row: 2/3;
+}
+.child-9 {
+    grid-column: 1/5;
+    grid-row: 3/4;
+}
+.child {
+    background: grey;
+}
+.parent-3 {
+    display: grid;
+    grid-template-columns: 10rem 10rem 10rem;
+    grid-template-rows: 5rem 10rem 5rem;
+    gap: 1rem 1rem;
+    justify-content: center;
+    margin: 3rem;
+}
+.child-10 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+.child-11 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.child-12 {
+    grid-column:2/4;
+    grid-row: 2/3;
+}
+.child-13 {
+    grid-column: 1/4;
+    grid-row: 3/4;
+}
