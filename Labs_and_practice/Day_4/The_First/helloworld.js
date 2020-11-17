@@ -51,3 +51,8 @@ console.log(average2);
 let sum3 = average1 + average2;
 let average3 = sum3 / 10;
 console.log(average3);
+
+let totalSum = (a,b) => a + b;
+let nums = [g, h, i, j, k];
+console.log(nums);
+console.log(nums.reduce(totalSum));
