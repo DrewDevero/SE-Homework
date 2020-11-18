@@ -31,5 +31,3 @@ console.log(average2);
 let sum3 = average1 + average2;
 let average3 = sum3 / 10;
 console.log(average3);
-
-
