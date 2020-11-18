@@ -16,3 +16,15 @@ function findAverage (arr) {
 
 console.log(findAverage(arr1));
 console.log(findAverage(arr2));
+
+// cleaner solution below - getting better at using forEach method over using loops.
+
+function testAverage (arr) {
+    let sum = 0;
+    arr.forEach((item) => 
+        sum += item);
+    average = sum / arr.length;
+    return average;
+}
+console.log(testAverage(arr1));
+console.log(testAverage(arr2));
