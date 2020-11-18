@@ -14,8 +14,8 @@ function findAverage (arr) {
     return average;
 }
 
-console.log(findAverage(arr1));
-console.log(findAverage(arr2));
+console.log(findAverage(arr1)); // logs 12.2
+console.log(findAverage(arr2)); // logs 32.4
 
 // cleaner solution below - getting better at using forEach method over using loops.
 
@@ -26,5 +26,5 @@ function testAverage (arr) {
     average = sum / arr.length;
     return average;
 }
-console.log(testAverage(arr1));
-console.log(testAverage(arr2));
+console.log(testAverage(arr1)); // logs 12.2
+console.log(testAverage(arr2)); // logs 32.4
