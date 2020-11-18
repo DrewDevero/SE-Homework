@@ -5,6 +5,17 @@
 const GREETING = "Hello World";
 console.log(GREETING);
 
+const readline = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+ 
+readline.question('What is you name, friend?', name => {
+  console.log(`Hey there ${name}!`);
+  readline.close();
+});
+
+
 let a = 5;
 let b = 10;
 
