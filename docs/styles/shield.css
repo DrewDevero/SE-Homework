@@ -56,30 +56,30 @@ main {
 }
 #pointOne {
     position: absolute;
-    top: -8.5%;
+    top: -12%;
     left: 35%;
 }
 #pointTwo {
     position: absolute;
     transform: rotateZ(60deg);
     top: 28%;
-    right: -25%;
+    right: -48%;
 }
 #pointThree {
     position: absolute;
     transform: rotateZ(-55deg);
-    top: 88%;
-    right: -13%;
+    top: 98%;
+    right: -35%;
 }
 #pointFour {
     position: absolute;
     transform: rotateZ(55deg);
-    top: 88%;
-    left: -13%;
+    top: 98%;
+    left: -35%;
 }
 #pointFive {
     position: absolute;
     transform: rotateZ(-60deg);
     top: 28%;
-    left: -25%;
+    left: -58%;
 }

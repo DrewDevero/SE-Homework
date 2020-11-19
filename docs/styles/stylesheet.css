@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 110vh;
+}
+header {
+    background: rgba(38, 116, 206, 0.4);
+    height: 20vh;
+    width: 100%;
+}   
+#mainHeading {
+    display: flex;
+    justify-content: center;
+}
+header>div>h1 {
+    color: white;
+    font-size: 3rem;
+    text-transform: capitalize;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(120deg, rgba(0, 0, 0, 0.781), rgb(155, 155, 155), rgba(0, 0, 0, 0.781));
+    -webkit-background-clip: text;
+    margin: 2rem auto 2rem;
+}
+main {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.781), rgb(216, 216, 216), rgba(0, 0, 0, 0.781));
+    padding-top: 1rem;
+    height: 100vh;
+}
+.contentSpacing {
+    display: flex;
+    justify-content: space-around;
+}
+.center {
+    text-align: center;
+}
+#box1 {
+    background: url("../images/taxes-pexels-cytonn-photography-955389.jpg"); /* "https://www.pexels.com/photo/white-paper-and-silver-fountain-pen-955394/" Photo by Cytonn Photography from Pexels
+*/
+    /* background-color: rgba(255, 0, 0, 0.801); */
+    height: 40vh;
+    width: 20rem;
+    margin: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    outline: solid green 0.25rem;
+    opacity: 0.9;
+    cursor: pointer;    
+    transition: all 0.5s linear;
+}
+#box2 {
+    background: url("../images/taxes-pexels-christina-morillo-118124.jpg"); /*"https://www.pexels.com/photo/person-using-macbook-air-on-table-1181248/" Photo by Christina Morillo from Pexels
+ */
+    /* background-color: rgba(158, 77, 212, 0.801); */
+    height: 40vh;
+    width: 20rem;
+    margin: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    outline: solid green 0.25rem;
+    opacity: 0.9;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+#box1:hover {
+    opacity: 1;
+    height: 45vh;
+    width: 22rem;
+}
+#box2:hover {
+    opacity: 1;
+    height: 45vh;
+    width: 22rem;
+}
+.box1Text {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: rgba(105, 18, 18, 0.2);
+    margin: 2rem;
+    font-size: 2rem;
+}
+#box2Text {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: rgba(105, 18, 18, 0.2);
+    margin: 2rem;
+    font-size: 2rem;
+}
+#box3 {
+    background: url("../images/taxes-pexels-cytonn-photography-955389.jpg"); /* "https://www.pexels.com/photo/white-paper-and-silver-fountain-pen-955394/" Photo by Cytonn Photography from Pexels
+*/
+    /* background-color: rgba(255, 0, 0, 0.801); */
+    height: 40vh;
+    width: 20rem;
+    margin: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    outline: solid green 0.25rem;
+    opacity: 0.9;
+    cursor: pointer;    
+    transition: all 0.5s linear;
+}
+#box4 {
+    background: url("../images/CFernando.jpg"); /*"https://www.pexels.com/photo/person-using-macbook-air-on-table-1181248/" Photo by Christina Morillo from Pexels
+ */
+    /* background-color: rgba(158, 77, 212, 0.801); */
+    height: 43vh;
+    width: 23rem;
+    margin: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    background-size: auto;
+    outline: solid green 0.25rem;
+    opacity: 0.9;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+#box3:hover {
+    opacity: 1;
+    height: 45vh;
+    width: 22rem;
+}
+#box4:hover {
+    opacity: 1;
+    height: 53vh;
+    width: 25rem;
+}
+#box3Text {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: rgba(105, 18, 18, 0.2);
+    font-size: 2rem;
+}
+#box4Text {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: rgba(105, 18, 18, 0.2);
+    font-size: 2rem;
+}
+#box5 {
+    background: url("../images/taxes-pexels-cytonn-photography-955389.jpg"); /* "https://www.pexels.com/photo/white-paper-and-silver-fountain-pen-955394/" Photo by Cytonn Photography from Pexels
+*/
+    /* background-color: rgba(255, 0, 0, 0.801); */
+    height: 40vh;
+    width: 20rem;
+    margin: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    outline: solid green 0.25rem;
+    opacity: 0.9;
+    cursor: pointer;    
+    transition: all 0.5s linear;
+}
+#box6 {
+    background: url("../images/taxes-pexels-christina-morillo-1181248.jpg"); /*"https://www.pexels.com/photo/person-using-macbook-air-on-table-1181248/" Photo by Christina Morillo from Pexels
+ */
+    /* background-color: rgba(158, 77, 212, 0.801); */
+    height: 40vh;
+    width: 20rem;
+    margin: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    outline: solid green 0.25rem;
+    opacity: 0.9;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+#box5:hover {
+    opacity: 1;
+    height: 45vh;
+    width: 22rem;
+}
+#box6:hover {
+    opacity: 1;
+    height: 45vh;
+    width: 22rem;
+}
+#box5Text {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: rgba(105, 18, 18, 0.2);
+    margin: 2rem;
+    font-size: 2rem;
+}
+#box6Text {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: rgba(105, 18, 18, 0.2);
+    margin: 2rem;
+    font-size: 2rem;
+}
+#box7 {
+    background: url("../images/taxes-pexels-cytonn-photography-955389.jpg"); /* "https://www.pexels.com/photo/white-paper-and-silver-fountain-pen-955394/" Photo by Cytonn Photography from Pexels
+*/
+    /* background-color: rgba(255, 0, 0, 0.801); */
+    height: 40vh;
+    width: 20rem;
+    margin: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    outline: solid green 0.25rem;
+    opacity: 0.9;
+    cursor: pointer;    
+    transition: all 0.5s linear;
+}
+#box8 {
+    background: url("../images/taxes-pexels-christina-morillo-1181248.jpg"); /*"https://www.pexels.com/photo/person-using-macbook-air-on-table-1181248/" Photo by Christina Morillo from Pexels
+ */
+    /* background-color: rgba(158, 77, 212, 0.801); */
+    height: 40vh;
+    width: 20rem;
+    margin: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    outline: solid green 0.25rem;
+    opacity: 0.9;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+#box7:hover {
+    opacity: 1;
+    height: 45vh;
+    width: 22rem;
+}
+#box8:hover {
+    opacity: 1;
+    height: 45vh;
+    width: 22rem;
+}
+#box7Text {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: rgba(105, 18, 18, 0.2);
+    margin: 2rem;
+    font-size: 2rem;
+}
+#box8Text {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: rgba(105, 18, 18, 0.2);
+    margin: 2rem;
+    font-size: 2rem;
+}
+#box9 {
+    background: url("../images/taxes-pexels-cytonn-photography-955389.jpg"); /* "https://www.pexels.com/photo/white-paper-and-silver-fountain-pen-955394/" Photo by Cytonn Photography from Pexels
+*/
+    /* background-color: rgba(255, 0, 0, 0.801); */
+    height: 40vh;
+    width: 20rem;
+    margin: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    outline: solid green 0.25rem;
+    opacity: 0.9;
+    cursor: pointer;    
+    transition: all 0.5s linear;
+}
+#box10 {
+    background: url("../images/taxes-pexels-christina-morillo-1181248.jpg"); /*"https://www.pexels.com/photo/person-using-macbook-air-on-table-1181248/" Photo by Christina Morillo from Pexels
+ */
+    /* background-color: rgba(158, 77, 212, 0.801); */
+    height: 40vh;
+    width: 20rem;
+    margin: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    outline: solid green 0.25rem;
+    opacity: 0.9;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+#box9:hover {
+    opacity: 1;
+    height: 45vh;
+    width: 22rem;
+}
+#box10:hover {
+    opacity: 1;
+    height: 45vh;
+    width: 22rem;
+}
+#box9Text {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: rgba(105, 18, 18, 0.2);
+    margin: 2rem;
+    font-size: 2rem;
+}
+#box10Text {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: rgba(105, 18, 18, 0.2);
+    margin: 2rem;
+    font-size: 2rem;
+}

@@ -1,15 +1,6 @@
 const SHIELD = document.getElementById("shieldSection");
 const POINTS = document.getElementsByClassName("points");
 
-/* (function pointAnimation(points) {
-for (let i = 0; i < POINTS.length; i++) {
-    let time = 2000;
-    setTimeout(() => points[i].animate([{fontSize: "inherit", easing: "ease-in-out"},{fontSize: "3rem", color: "blue", easing: "ease-in-out"},{fontSize: "inherit", easing: "ease-in-out"}], 2000), time);
-    setTimeout(() => {setInterval(() => points[i].animate([{fontSize: "inherit", easing: "ease-in-out"},{fontSize: "3rem", color: "blue", easing: "ease-in-out"},{fontSize: "inherit", easing: "ease-in-out"}], 2000), 10000)}, time);
-    time++;
-}
-})(POINTS); */
-
 (function phase() {
         SHIELD.style.opacity = "1";
 })();
@@ -30,3 +21,12 @@ function pointAnimation(point) {
     setTimeout(() => {setInterval(() => pointAnimation(POINTS[3]), 10000)}, 8000);
     setTimeout(() => {setInterval(() => pointAnimation(POINTS[4]), 10000)}, 10000);
 })();
+
+/* (function pointAnimation(points) {
+for (let i = 0; i < POINTS.length; i++) {
+    let time = 2000;
+    setTimeout(() => points[i].animate([{fontSize: "inherit", easing: "ease-in-out"},{fontSize: "3rem", color: "blue", easing: "ease-in-out"},{fontSize: "inherit", easing: "ease-in-out"}], 2000), time);
+    setTimeout(() => {setInterval(() => points[i].animate([{fontSize: "inherit", easing: "ease-in-out"},{fontSize: "3rem", color: "blue", easing: "ease-in-out"},{fontSize: "inherit", easing: "ease-in-out"}], 2000), 10000)}, time);
+    time++;
+}
+})(POINTS); */
