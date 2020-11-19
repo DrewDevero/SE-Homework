@@ -39,7 +39,6 @@ num = 0;
 num = "eref"; */
 
 const number = 0;
-debugger;
 let num = 53;
 if (num > 0 && num > 100) {
     console.log("Positive Number and greater than 100.");
@@ -91,6 +90,12 @@ if(student >= 90) {
     console.log("F");
 }
 
+(function trail() {
+    for (let i = 0; i < 200; i++) {
+        console.log(i);
+    }
+})();
+
 /*
 3. Write a JavaScript program that displays "Good Morning" if time is between 5AM-11:59 | "Good Afternoon" if time is between 12 - 16 | otherwise "Hey there"
 */
@@ -105,3 +110,18 @@ if(time >= 5 && time < 12) {
     console.log("Hey There");
 }
 
+//Code Along
+
+let tag = "";
+for (let i = 0; i < 7; i++) {  
+    tag += "#";
+    console.log(tag);
+}
+
+for(let i = 10; i > 0; i--) {
+    console.log(i);
+}
+
+for(let i = 6; i <= 60; i+= 3) {
+    console.log(i);
+}
