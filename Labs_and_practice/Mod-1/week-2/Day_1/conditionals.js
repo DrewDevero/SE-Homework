@@ -21,7 +21,7 @@ If students get 55 or above: console log D
 Any grade lower than 55 is F
 */
 
-let student;
+let student = 78;
 if(student >= 90) {
     console.log("A");
 } else if(student >= 80) {
