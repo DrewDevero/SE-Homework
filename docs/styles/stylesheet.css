@@ -45,10 +45,11 @@ main {
     font-weight: bold;
 }
 #box3 {
-    background: url("../images/taxes-pexels-cytonn-photography-955389.jpg");
-    height: 40vh;
-    width: 20rem;
+    background: url("../images/pexels-cytonn-photography-955395.jpg");
+    height: 43vh;
+    width: 23rem;
     margin: 1rem;
+    background-size: 120%;
     background-position: center;
     background-repeat: no-repeat;
     background-blend-mode: screen;
@@ -73,12 +74,12 @@ main {
 }
 #box3:hover {
     opacity: 1;
-    height: 45vh;
-    width: 22rem;
+    height: 48vh;
+    width: 25rem;
 }
 #box4:hover {
     opacity: 1;
-    height: 53vh;
+    height: 48vh;
     width: 25rem;
 }
 #box3Text {
@@ -146,7 +147,7 @@ main {
     font-size: 2rem;
 }
 #box9 {
-    background: url("../images/Heart\ Art\ thumbnail.jpg");
+    background: url("../images/Drew\ Devero_Headshot.jpg");
     height: 40vh;
     width: 20rem;
     margin: 1rem;
