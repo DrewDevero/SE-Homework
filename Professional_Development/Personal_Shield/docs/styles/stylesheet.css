@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.781), rgb(216, 216, 216), rgba(0, 0, 0, 0.781));
+    height: 120vh;
+}
+header {
+    background: rgba(38, 116, 206, 0.4);
+    height: 20vh;
+    width: 100%;
+}   
+#mainHeading {
+    display: flex;
+    justify-content: center;
+}
+header>div>h1 {
+    color: white;
+    font-size: 3rem;
+    text-transform: capitalize;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(120deg, rgba(0, 0, 0, 0.781), rgb(155, 155, 155), rgba(0, 0, 0, 0.781));
+    -webkit-background-clip: text;
+    margin: 2rem auto 2rem;
+}
+main {
+    padding-top: 1rem;
+}
+.contentSpacing {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.center {
+    text-align: center;
+}
+.box1Text {
+    color: rgb(255, 255, 255);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: rgba(105, 18, 18, 0.1);
+    margin: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+#box3 {
+    background: url("../images/pexels-cytonn-photography-955395.jpg");
+    height: 43vh;
+    width: 23rem;
+    margin: 1rem;
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    outline: solid green 0.25rem;
+    opacity: 0.9;
+    cursor: pointer;    
+    transition: all 0.5s linear;
+}
+#box4 {
+    background: url("../images/CFernando.jpg");
+    height: 43vh;
+    width: 23rem;
+    margin: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    background-size: auto;
+    outline: solid green 0.25rem;
+    opacity: 0.9;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+#box3:hover {
+    opacity: 1;
+    height: 48vh;
+    width: 25rem;
+}
+#box4:hover {
+    opacity: 1;
+    height: 48vh;
+    width: 25rem;
+}
+#box3Text {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: rgba(105, 18, 18, 0.1);
+    font-size: 2rem;
+    width: 1rem;
+}
+#box4Text {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: rgba(105, 18, 18, 0.1);
+    font-size: 2rem;
+}
+#box5 {
+    background: url("https://marketingweek.imgix.net/content/uploads/2018/07/31114437/innovation-2.jpg");
+    height: 50vh;
+    width: 28rem;
+    margin: 1rem;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    outline: solid green 0.25rem;
+    opacity: 0.9;
+    cursor: pointer;    
+    transition: all 0.5s linear;
+}
+#box5:hover {
+    opacity: 1;
+    height: 63vh;
+    width: 30rem;
+}
+#box5Text {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: rgba(105, 18, 18, 0.1);
+    margin: 2rem;
+    font-size: 2rem;
+}
+#box7 {
+    background: url("https://catalog.juilliard.edu/mime/media/14/112/Juilliard30%20-%20Credited.jpg");
+    height: 45vh;
+    width: 26rem;
+    margin: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    outline: solid green 0.25rem;
+    opacity: 0.9;
+    cursor: pointer;    
+    transition: all 0.5s linear;
+}
+#box7:hover {
+    opacity: 1;
+    height: 55vh;
+    width: 35rem;
+}
+#box7Text {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: rgba(105, 18, 18, 0.1);
+    margin: 2rem;
+    font-size: 2rem;
+}
+#box9 {
+    background: url("../images/Drew\ Devero_Headshot.jpg");
+    height: 40vh;
+    width: 20rem;
+    margin: 1rem;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    outline: solid green 0.25rem;
+    opacity: 0.9;
+    cursor: pointer;    
+    transition: all 0.5s linear;
+}
+#box9:hover {
+    opacity: 1;
+    height: 45vh;
+    width: 22rem;
+}
+#box9Text {
+    text-align: center;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: rgba(105, 18, 18, 0.1);
+    margin: 2rem;
+    font-size: 2rem;
+}
+.arrowSpacing {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10rem;
+    position: relative;
+}
+.backArrow {
+    /* background: linear-gradient(120deg, rgba(0, 0, 0, 0.781), rgb(155, 155, 155), rgba(0, 0, 0, 0.781)); */
+    background: white;
+    clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+    height: 20vh;
+    width: 20vw;
+    font: 10rem;
+    font-family: Impact, Arial, sans-serif;
+    font-weight: bolder;
+    color: black;
+    margin: 2rem;
+}
+#arrowText {
+    color: black;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    position: absolute;
+    top: 35%;
+    left: 8%;
+}

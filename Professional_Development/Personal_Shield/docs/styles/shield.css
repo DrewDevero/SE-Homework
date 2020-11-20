@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 body {
-    height: 110vh;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.781), rgb(216, 216, 216), rgba(0, 0, 0, 0.781));
+    height: 120vh;
 }
 header {
     background: rgba(38, 116, 206, 0.4);
@@ -25,9 +26,7 @@ header>div>h1 {
     margin: 2rem auto 2rem;
 }
 main {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.781), rgb(216, 216, 216), rgba(0, 0, 0, 0.781));
     padding-top: 1rem;
-    height: 100vh;
 }
 #shieldSection {
     opacity: 0;
@@ -56,30 +55,30 @@ main {
 }
 #pointOne {
     position: absolute;
-    top: -8.5%;
+    top: -12%;
     left: 35%;
 }
 #pointTwo {
     position: absolute;
     transform: rotateZ(60deg);
     top: 28%;
-    right: -25%;
+    right: -48%;
 }
 #pointThree {
     position: absolute;
     transform: rotateZ(-55deg);
-    top: 88%;
-    right: -13%;
+    top: 98%;
+    right: -35%;
 }
 #pointFour {
     position: absolute;
     transform: rotateZ(55deg);
-    top: 88%;
-    left: -13%;
+    top: 98%;
+    left: -35%;
 }
 #pointFive {
     position: absolute;
     transform: rotateZ(-60deg);
     top: 28%;
-    left: -25%;
+    left: -58%;
 }
