@@ -27,3 +27,16 @@ function getChange (pay, product) {
 console.log(getChange(1000, 400));
 console.log(getChange(12, 33));
 console.log(getChange(2000, 200));
+
+//Nando purchase $27.83. Paid with $100. Change given to Nando in largest possible denominations.
+
+// partial test case below:
+function bigestDenomChange(pay, price) {
+denom_100 = 100.00;
+denom_50 = 50.00;
+denom_20 = 20.00;
+denom_10 = 10.00;
+denom_5 = 5.00;
+denom_1 = 1.00;
+const CHANGE = pay - price;
+}
