@@ -4,10 +4,22 @@
 4.While loops Fundamentals: https://csx.codesmith.io/units/precourse-part-2/challenge-while-loops-fundamentals
 */
 
-while (nums < 20) {
+while (nums < 2) {
     // only prints numbers that can be made by nums * 1 and is not divisible by any prime less than or equal to the square root of nums
+    while (numberCheck < 20 && numberCheck > 0) {
+        while (numberCheck_2 < 20 && numberCheck_2 > 0) {
+            if (nums === numberCheck * numberCheck_2) {
+            nums++;
+            } else if (nums !== numberCheck * numberCheck_2 && nums === nums * 1) {
+            console.log(nums);
+            nums++;
+            }
+        numberCheck_2--;
+        }
+    numberCheck --;
     }
-    nums++;
+    nums++
+}
 
 // Angel's Code example below:
 // 2, 3, 5, 7, 11, 13, 17, 19
