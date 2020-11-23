@@ -4,7 +4,10 @@
 4.While loops Fundamentals: https://csx.codesmith.io/units/precourse-part-2/challenge-while-loops-fundamentals
 */
 
-
+while (nums < 20) {
+    // only prints numbers that can be made by nums * 1 and is not divisible by any prime less than or equal to the square root of nums
+    }
+    nums++;
 
 // Angel's Code example below:
 // 2, 3, 5, 7, 11, 13, 17, 19
@@ -66,8 +69,3 @@ while (number_2 < 21) {
 }
 let nums = 2;
 let numberCheck = 2;
-
-while (nums < 20) {
-    // only prints numbers that can be made by nums * 1 and is not divisible by any prime less than or equal to the square root of nums
-    }
-    nums++;
