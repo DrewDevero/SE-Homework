@@ -36,6 +36,7 @@ function isCharacterAVowel(character) {
     for(let i = 0; i < vowels.length; i++) {
         if (character === vowels[i]) {
         isAVowel = true;
+        break;
         } else {
         isAVowel = false;
         }
