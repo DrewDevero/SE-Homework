@@ -113,3 +113,14 @@ const reverseString = (string) => {
     console.log(stringReverse);
 }
 reverseString("hello");
+
+findLongestWord = (words) => {
+    let arrayOfWordLengths = [];
+// engage each word in the array
+    for(let i = 0; i < words.length; i++) {
+        arrayOfWordLengths.push(words[i].length);
+    }
+    console.log(arrayOfWordLengths);
+    console.log(Math.max(...arrayOfWordLengths));
+}
+findLongestWord(["hello", "howAreYou", "friend"]);
