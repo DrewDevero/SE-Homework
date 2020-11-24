@@ -109,7 +109,7 @@ numOfArguments();
 const reverseString = (string) => {
     const readForwardArray = string.split("");
     const readReverseArray = readForwardArray.reverse((first,last) => last - first);
-    const stringReverse = readReverseArray.toString("");
+    const stringReverse = readReverseArray.join("");
     console.log(stringReverse);
 }
 reverseString("hello");
