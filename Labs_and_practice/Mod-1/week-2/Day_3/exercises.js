@@ -98,10 +98,10 @@ const pennie = 0.01;
             } else if (change >= pennie) {
                 change -= pennie;
                 pennieReceived ++;
-            }
-            changeDue = [`${hundredReceived} hundreds`, `${fiftyReceived} fifties`, `${twentyReceived} twenties`, `${tenReceived} tens`, `${fiveReceived} fives`, `${oneReceived} ones`, `${quarterReceived} quarters`, `${dimeReceived} dimes`, `${nickleReceived} nickles`, `${pennieReceived} pennies`]
+            }   
         }
-        return changeDue;
+        changeDue = [`${hundredReceived} hundreds`, `${fiftyReceived} fifties`, `${twentyReceived} twenties`, `${tenReceived} tens`, `${fiveReceived} fives`, `${oneReceived} ones`, `${quarterReceived} quarters`, `${dimeReceived} dimes`, `${nickleReceived} nickles`, `${pennieReceived} pennies`];
+        console.log(changeDue);
     } 
 }
-console.log(bigestDenomChange(100, 27.83));
+bigestDenomChange(100, 27.83);
