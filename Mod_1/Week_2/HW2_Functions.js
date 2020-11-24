@@ -118,9 +118,23 @@ findLongestWord = (words) => {
     let arrayOfWordLengths = [];
 // engage each word in the array
     for(let i = 0; i < words.length; i++) {
+// place each word length in array, arrayOfWordLengths
         arrayOfWordLengths.push(words[i].length);
     }
     console.log(arrayOfWordLengths);
     console.log(Math.max(...arrayOfWordLengths));
 }
 findLongestWord(["hello", "howAreYou", "friend"]);
+
+filterLongestWord = (words, i) => {
+    let arrayOfWordLengths = [];
+// engage each word in the array
+    for(let j = 0; j < words.length; j++) {
+// place each word longer than lengthCheck in the array, arrayOfWordLengths
+        if (words[j].length > i) {
+        arrayOfWordLengths.push(words[j]);
+        }
+    }
+    console.log(arrayOfWordLengths);
+}
+filterLongestWord(["hello", "howAreYou", "friend", "someNiceLearningHere"], 7);
