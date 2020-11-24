@@ -138,3 +138,12 @@ filterLongestWord = (words, i) => {
     console.log(arrayOfWordLengths);
 }
 filterLongestWord(["hello", "howAreYou", "friend", "someNiceLearningHere"], 7);
+
+class MakeAReverseStringObj {
+    constructor() {
+        this.reverseString = reverseString;
+    }
+}
+const string = new MakeAReverseStringObj;
+
+stri.reverseString("Per Scholas");
