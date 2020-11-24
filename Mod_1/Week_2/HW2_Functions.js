@@ -107,8 +107,9 @@ function numOfArguments(argument1, argument2, argument3) {
 numOfArguments();
 
 const reverseString = (string) => {
-    const readForward = string.split("");
-    const readReverse = readForward.reverse((a,b) => b - a);
-    console.log(readReverse);
+    const readForwardArray = string.split("");
+    const readReverseArray = readForwardArray.reverse((first,last) => last - first);
+    const stringReverse = readReverseArray.toString("");
+    console.log(stringReverse);
 }
 reverseString("hello");
