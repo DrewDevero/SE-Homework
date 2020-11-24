@@ -32,7 +32,7 @@ maxOfThreeNumbers(4, 8, 6);
 /* Write a function isCharacterAVowel that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise */
 function isCharacterAVowel(character) {
     let isAVowel;
-    const vowels = ["a", "e", "i", "o", "u"];
+    const vowels = "aeiou";
     for(let i = 0; i < vowels.length; i++) {
         if (character === vowels[i]) {
         isAVowel = true;
@@ -61,7 +61,7 @@ Write a function vowelCount that takes a String and returns the number of vowels
 
 function vowelCount(string) {
     let vowelAmount = 0;
-    let vowels = ["a", "e", "i", "o", "u"];
+    let vowels = "aeiou";
     for(let i = 0; i < vowels.length; i++) {
         for(let j = 0; j < string.length; j++) {
             if(string[j] === vowels[i]) {
