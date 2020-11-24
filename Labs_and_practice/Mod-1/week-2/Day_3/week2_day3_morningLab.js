@@ -64,24 +64,26 @@ function vowelCount(string) {
     let vowelAmount = 0;
 // list all vowels as a string to eventually check against
     let vowels = "aeiou";
-// loop through all vowels
-    for(let i = 0; i < vowels.length; i++) {
-// each time you are on a vowel in vowels loop through your submitted string
-        for(let j = 0; j < string.length; j++) {
-// if any letter in the string is equal to the current vowel your on in your loop, increase the amount referenced by vowelAmount by 1
-            if(string[j] === vowels[i]) {
-                vowelAmount ++;
-            }
-        }
-    }
 //if the length of your string is greater than 10 log out the statement
     if(string.length > 10) {
-        console.log(`${string} is more than 10 characters!`);
+        console.log(`${string} is more than 10 characters! Please submit a smaller string.`);
+    } else {
+    // loop through all vowels
+        for(let i = 0; i < vowels.length; i++) {
+    // each time you are on a vowel in vowels loop through your submitted string
+            for(let j = 0; j < string.length; j++) {
+    // if any letter in the string is equal to the current vowel your on in your loop, increase the amount referenced by vowelAmount by 1
+                if(string[j] === vowels[i]) {
+                    vowelAmount ++;
+                }
+            }
+        }
+    // log your vowelAmount for your string submission
+    // return the value (will not show if using node.js)
+        console.log(vowelAmount);
+        return vowelAmount;
     }
-// log your vowelAmount for your string submission
-// return the value (will not show if using node.js)
-    console.log(vowelAmount);
-    return vowelAmount;
 }
 // call vowelCount with your string submission
+vowelCount("verycool");
 vowelCount("helloTherePeople");
