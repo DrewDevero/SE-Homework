@@ -7,37 +7,66 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- Generated with the instructors input -->
+    <!-- Generated general calculator functionality using the Per Scholas module and the instructor's/Angel's operations -->
+    <!-- All work creating an average calculation component is solely Drew's work -->
   <form name="Calc">
     <table>
       <tr>
         <input type="text" name="Input" size-16>
       </tr>
       <tr>
-        <input type="button" name="one" value="1" onclick="Calc.Input.value += '1'">
-        <input type="button" name="two" value="2" onclick="Calc.Input.value += '2'">
-        <input type="button" name="three" value="3" onclick="Calc.Input.value += '3'">
+        <td>
+            <input type="button" name="one" value="1" onclick="Calc.Input.value += '1'; arrayToAverage.push(1)">
+            <input type="button" name="two" value="2" onclick="Calc.Input.value += '2'; arrayToAverage.push(2)">
+            <input type="button" name="three" value="3" onclick="Calc.Input.value += '3'; arrayToAverage.push(3)">
+        </td>
       </tr>
       <tr>
+        <td>
+            <input type="button" name="four" value="4" onclick="Calc.Input.value += '4'; arrayToAverage.push(4)">
+            <input type="button" name="five" value="5" onclick="Calc.Input.value += '5'; arrayToAverage.push(5)">
+            <input type="button" name="six" value="6" onclick="Calc.Input.value += '6'; arrayToAverage.push(6)">
+        </td>
+      </tr>
+        <td>
+            <input type="button" name="seven" value="7" onclick="Calc.Input.value += '7'; arrayToAverage.push(7)">
+            <input type="button" name="eight" value="8" onclick="Calc.Input.value += '8'; arrayToAverage.push(8)">
+            <input type="button" name="nine" value="9" onclick="Calc.Input.value += '9'; arrayToAverage.push(9)">
+        </td>
+      </tr>
       <tr>
-        <input type="button" name="four" value="4" onclick="Calc.Input.value += '4'">
-        <input type="button" name="five" value="5" onclick="Calc.Input.value += '5'">
-        <input type="button" name="six" value="6" onclick="Calc.Input.value += '6'">
+        <td>
+            <input type="button" name="zero" value="0" onclick="Calc.Input.value += '0'">
+            <input type="button" name="addition" value="+" onclick="Calc.Input.value += '+'">
+            <input type="button" name="subtraction" value="-" onclick="Calc.Input.value += '-'">
+            <input type="button" name="multiplication" value="*" onclick="Calc.Input.value += '*'">
+            <input type="button" name="division" value="/" onclick="Calc.Input.value += '/'">
+        </td>
       </tr>
-        <input type="button" name="seven" value="7" onclick="Calc.Input.value += '7'">
-        <input type="button" name="eight" value="8" onclick="Calc.Input.value += '8'">
-        <input type="button" name="nine" value="9" onclick="Calc.Input.value += '9'">
-      </tr>
-      <tr>
-        <input type="button" name="zero" value="0" onclick="Calc.Input.value += '0'">
-        <input type="button" name="addition" value="+" onclick="Calc.Input.value += '+'">
-        <input type="button" name="subtraction" value="-" onclick="Calc.Input.value += '-'">
-        <input type="button" name="multiplication" value="*" onclick="Calc.Input.value += '*'">
-        <input type="button" name="division" value="/" onclick="Calc.Input.value += '/'">
-      </tr>
-      <input type="button" name="evaluate" value="=" onclick="Calc.Input.value=eval(Calc.Input.value)">
+        <tr>
+         <td>
+      <input type="button" name="evaluate" value="=" onclick="Calc.Input.value= eval(Calc.Input.value)">
+         </td>
+        </tr>
+        <tr>
+         <td>
+            <input type="button" name="average" value="AVG" onclick="averageThis()">
+         </td>
+        </tr>
     </table>
   </form> 
+<script>
+    let arrayToAverage = [];
+    let numAveraged;
+    function averageThis() {
+        function average(array) {
+            let numToAverage = array.reduce((a,b) => a + b);
+            let numAveraged =  numToAverage / array.length;
+            Calc.Input.value = numAveraged;
+        }
+        average(arrayToAverage);
+    }
+</script>
 <script type="text/javascript" src="calculator.js"></script> 
 </body>
 </html>
