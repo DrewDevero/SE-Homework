@@ -16,6 +16,7 @@ button {
     text-transform: capitalize;
 }
 #image {
+    margin: 1rem;
     height: 40vh;
 }
 #second {
