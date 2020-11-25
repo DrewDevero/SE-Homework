@@ -1,12 +1,31 @@
 #greeting {
     color: black;
+    text-transform: capitalize;
+}
+h1 {
+    text-transform: capitalize;
 }
 .p {
     color: blue;
     font-size: 1rem;
+    text-transform: capitalize;
 }
 button {
-    text-transform: capitalize;
     height: 10vh;
     width: 10vw;
+    text-transform: capitalize;
 }
+#image {
+    height: 40vh;
+}
+#second {
+    font-size: 3rem;
+}
+.heading_2 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+.heading_3 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}  
