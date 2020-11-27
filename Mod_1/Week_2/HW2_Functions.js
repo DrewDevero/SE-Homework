@@ -146,4 +146,4 @@ class MakeAReverseStringObj {
 }
 const string = new MakeAReverseStringObj;
 
-stri.reverseString("Per Scholas");
+string.reverseString("Per Scholas");
