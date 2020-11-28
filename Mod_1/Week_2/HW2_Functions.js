@@ -185,10 +185,7 @@ function stringKeyAndVal(string) {
         constructor() { 
             for(let i = 0; i < str.length; i++) {
                 this[str[i]] = 0;
-                if (Object.keys(this[str[i]]) === undefined) {
-                    delete Object.keys(this[str[i]]);
-                }
-                console.log(Object.keys(this)[i]);
+                console.log(this);
                 for(let j = 0; j < str.length; j++) {
                     if(Object.keys(this)[i] === str[j]) {
                         this[str[i]] += 1;
