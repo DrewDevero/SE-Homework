@@ -201,5 +201,9 @@ const perScholasObj = stringObj
 console.log(perScholasObj);
 console.log(stringKeyAndVal("Stuff"));
 const stuffObj = stringObj;
-console.log(perScholasObj);
 console.log(stuffObj);
+console.log(perScholasObj); //object retains original/desired assignment
+console.log(perScholasObj.c); // shows object value at desired key
+console.log(stuffObj.u);
+console.log(Object.keys(perScholasObj)); // shows object keys
+console.log(Object.keys(stuffObj));
