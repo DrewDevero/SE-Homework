@@ -197,4 +197,9 @@ function stringKeyAndVal(string) {
     return stringObj;
 }
 console.log(stringKeyAndVal("Per Scholas"));
-console.log(stringObj);
+const perScholasObj = stringObj
+console.log(perScholasObj);
+console.log(stringKeyAndVal("Stuff"));
+const stuffObj = stringObj;
+console.log(perScholasObj);
+console.log(stuffObj);
