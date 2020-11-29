@@ -172,6 +172,7 @@ String.prototype.reverseString = function () {
 the keys are the characters that occur in the string
 the values are the number of occurrences for each letter, regardless of the case */
 
+let StringObj = {};
 function stringKeyAndVal(string) {
     let strArr = [];
     for(let i = 0; i < string.length; i++) {
@@ -180,7 +181,6 @@ function stringKeyAndVal(string) {
         }
     }
     let str = strArr.join("").toLowerCase();
-    console.log(str);
     class makesAString {
         constructor() { 
             for(let i = 0; i < str.length; i++) {
@@ -193,7 +193,8 @@ function stringKeyAndVal(string) {
             }
         }
     }
-    let stringObj = new makesAString;
+    stringObj = new makesAString;
     return stringObj;
 }
 console.log(stringKeyAndVal("Per Scholas"));
+console.log(stringObj);
