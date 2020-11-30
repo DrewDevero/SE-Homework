@@ -31,11 +31,14 @@ console.log(yoda);
 
 /* 4. People been lining up for hours to get the newest iphone release. Help manage the unruly crowd of privileged customers by serving them one at a time and assiging it to a variable named `nowServing`. Console.log this new variable as well as the waitList. */
 
+// Sticking with forEach instead of using a for loop for the practice
+
 var waitList = [ "Chance the Rapper", "Khalid", "Tay-Tay", "Barry Manilow", "Piko Taro" ];
+var waitListTest = [ "Chance the Rapper", "Khalid", "Tay-Tay", "Barry Manilow", "Piko Taro" ];
 
 let nowServing = [];
-waitList.forEach(person => {nowServing.push(`${person} is being served`)});
-console.log(waitList, nowServing);
+waitListTest.forEach(person => {nowServing.push(`${waitList.shift(person)} is being served`); console.log(nowServing, waitList)});
+/* console.log(waitList, nowServing); */
 
 /* 5. Help Nike sell more overpriced sneakers by changing their slogan from an array into a string. Convert the shoe array and assign it to a variable named `shoeString`. Console.log this new variable. */
 
