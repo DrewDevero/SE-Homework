@@ -58,9 +58,5 @@ department: "I.T."
 
 let userKeys = Object.keys(user1);
 let userValues = Object.values(user1);
-userKeys.map(value => {
-    for(i = 0; i < userKeys.length; i++) {
-        console.log(value)
-    }
-});
+userValues.map(value => console.log(value));
 
