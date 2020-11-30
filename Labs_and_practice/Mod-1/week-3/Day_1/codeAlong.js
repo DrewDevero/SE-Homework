@@ -14,6 +14,11 @@ favFood.forEach((food, index) => {
 for (const element of favFood) {
     console.log(element);
 }
-
-const newFood = favFood.map(value => {value + " great"});
+console.log(favFood);
+const newFood = favFood.map(value => {return value + ", mmmm, delicious."});
 console.log(newFood);
+
+const arr = [1, 2, 3];
+console.log(...arr);
+const secondArr = [...arr];
+console.log(secondArr);
