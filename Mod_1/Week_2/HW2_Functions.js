@@ -114,7 +114,7 @@ numOfArguments();
 
 function reverseString(string) {
     const readForwardArray = string.split("");
-    const readReverseArray = readForwardArray.reverse((first,last) => last - first);
+    const readReverseArray = readForwardArray.reverse();
     const stringReverse = readReverseArray.join("");
     console.log(stringReverse);
     return stringReverse;
