@@ -1,7 +1,7 @@
 /* 1. What is an efficient way to create an array for first 50 integers? */
 
 let arrayToFifty = [];
-for (let i = 1; i < 51; i++) {
+for (let i = 1; i <= 50; i++) {
     arrayToFifty.push(i);
 }
 console.log(arrayToFifty);
@@ -34,7 +34,7 @@ console.log(yoda);
 // Sticking with forEach instead of using a for loop for the practice
 
 var waitList = [ "Chance the Rapper", "Khalid", "Tay-Tay", "Barry Manilow", "Piko Taro" ];
-var waitListTest = [ "Chance the Rapper", "Khalid", "Tay-Tay", "Barry Manilow", "Piko Taro" ];
+let waitListTest = [ "Chance the Rapper", "Khalid", "Tay-Tay", "Barry Manilow", "Piko Taro" ];
 
 let nowServing = [];
 waitListTest.forEach(person => {nowServing.push(`${waitList.shift(person)} is being served`); console.log(nowServing, waitList)});
