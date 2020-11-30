@@ -56,7 +56,38 @@ department: "I.T."
 
 };
 
-let userKeys = Object.keys(user1);
 let userValues = Object.values(user1);
 userValues.map(value => console.log(value));
 
+// Bonus 6:
+
+const checkObj = {
+  oddNum: 1,
+  evenNum: 2,
+  foundNum: 5,
+  randomNum: 18
+};
+
+const objToArray = [];
+for(const property in checkObj) {
+  checkObj[property] >=2 ? objToArray.push(checkObj[property]) : "";
+}
+console.log(objToArray);
+
+const checkObj = {
+  oddNum: 1,
+  evenNum: 2,
+  foundNum: 5,
+  randomNum: 18
+};
+
+let divBy6 = false;
+
+const objToArray = Object.values(checkObj);
+objToArray.forEach((value) => {
+  if (value % 6 === 0) {
+    console.log(divBy6 = true)
+  } else {
+    console.log(divBy6 = false)
+  }
+})
