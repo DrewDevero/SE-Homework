@@ -37,8 +37,11 @@ var waitList = [ "Chance the Rapper", "Khalid", "Tay-Tay", "Barry Manilow", "Pik
 let waitListTest = [ "Chance the Rapper", "Khalid", "Tay-Tay", "Barry Manilow", "Piko Taro" ];
 
 let nowServing = [];
-waitListTest.forEach(person => {nowServing.push(`${waitList.shift(person)} is being served`); console.log(nowServing, waitList)});
-/* console.log(waitList, nowServing); */
+
+waitListTest.forEach(person => {
+    nowServing.push(`${waitList.shift(person)} is being served`); console.log(`${nowServing[nowServing.length - 1].toString()}: \n\n  ${waitList.toString()} are waiting to be served \n`);
+});
+
 
 /* 5. Help Nike sell more overpriced sneakers by changing their slogan from an array into a string. Convert the shoe array and assign it to a variable named `shoeString`. Console.log this new variable. */
 
