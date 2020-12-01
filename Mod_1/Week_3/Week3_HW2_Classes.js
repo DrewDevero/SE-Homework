@@ -13,26 +13,28 @@ Write a function called square_area that returns the area of the given object.
 Write a function total_sides that returns the number of sides of the object. */
 
 class Circle {
-    constructor(diameter) {
+    constructor(diameter = "please enter a number") {
         this.diameter = diameter,
         this.radius = diameter / 2,
         this.circumference = Math.PI * this.diameter;
         this.sides = "infinite"
     }
     circle_area() {
-        console.log(Math.PI * Math.pow(this.radius,2));
+        console.log(Math.PI * Math.pow(this.radius, 2));
     }
     total_sides() {
         console.log(`Any circle has ${this.sides} sides`);
     }
 }
 
-const Circle1 = new Circle(10);
-const Circle2 = new Circle(7);
-const Circle3 = new Circle(3);
+const CIRCLE1 = new Circle(10);
+const CIRCLE2 = new Circle(7);
+const CIRCLE3 = new Circle(3);
+
+CIRCLE1.circle_area();
 
 class Rectangle {
-    constructor(length, width) {
+    constructor(length = "please enter a number", width = "please enter a number") {
         this.length = length,
         this.width = width,
         this.sides = 4
@@ -45,12 +47,14 @@ class Rectangle {
     }
 }
 
-const Rectangle1 = new Rectangle(4,5);
-const Rectangle2 = new Rectangle(10,7);
-const Rectangle3 = new Rectangle(8,13);
+const RECTANGLE1 = new Rectangle(4,5);
+const RECTANGLE2 = new Rectangle(10,7);
+const RECTANGLE3 = new Rectangle(8,13);
+
+RECTANGLE2.rectangle_area();
 
 class Square extends Rectangle {
-    constructor(faces) {
+    constructor(faces = "please enter a number") {
         super(faces, faces)
         this.faces = faces;
     }
@@ -62,8 +66,9 @@ class Square extends Rectangle {
     }
 }
 
-const square1 = new Square(4);
-const square2 = new Square(8);
-const square3 = new Square(5);
+const SQUARE1 = new Square(4);
+const SQUARE2 = new Square(8);
+const SQUARE3 = new Square(5);
 
-square3.square_area();
+SQUARE3.square_area();
+SQUARE1.square_sides();
