@@ -71,7 +71,10 @@ class Dog {
     }
 }
 
-const WOOFIE = new Dog("Woofie", 15, "brown", "Tamaranian");
-const BARKIE = new Dog("Barkie", 5, "black", "Courgie");
-const SNARKIE = new Dog("Snarkie", undefined,"green", "Palmeranian")
+const WOOFIE = new Dog("Woofie", 15, "brown", "Tamaranean");
+const BARKIE = new Dog("Barkie", 5, "black", "Corgi");
+const SNARKIE = new Dog("Snarkie", undefined,"green", "Pomeranian")
 console.log(WOOFIE.name, WOOFIE.color,'\n',BARKIE.name, BARKIE.color,'\n',SNARKIE.name, SNARKIE.age);
+WOOFIE.running();
+BARKIE.singing();
+SNARKIE.eating();
