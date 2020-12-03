@@ -1,0 +1,37 @@
+API Methods for http://dummy.restapiexample.com/ :
+
+	GET, POST, PUT, DELETE
+
+URL Diferences:
+
+	/employee, /employee/1, /create, /update/21, /delete/2
+
+Web services:
+
+	Allow for applications to communicate with eachother over a network. A few are: XML-RPC, UDDI, SOAP, and REST.
+
+SOAP disadvantages:
+
+	Verbose; requires high level creation and manipualation of source content in order for it to be transferable.
+
+REST disadvantages:
+
+	Limiting; less capable of manipulating data at it's source. No built-in error handlingv or WS standard extensibility.
+
+HTTP Methods supported in Restful Web Services:
+
+	GET = receive data, POST = create new data, PATCH = edit portiion of existing data, PUT = edit entire resource of data, DELETE = remove data
+
+JAS-RS-API:
+	
+	Java API for RESTful Web Services that provides portable APIs for generating, viewing, and manipulating	web appliactions that are abide by REST architecture. Helps in creating RESTful web resources that aren't stifled by Java's underlying language requirements by using a high-level(easy for humans to read and write), declaritive annotation-based API. 
+
+School API:
+
+#	Route		Method	Type	Full route						Description			Details
+1	/teacher 	GET	JSON	http://myapi-schoolexample.com/api/v1/school/teacher	Get all teacher data		Details - link to show results
+2	/teacher/{id}	GET	JSON	http://myapi-schoolexample.com/api/v1/school/teacher/1	Get single teacher data		Details - link to show results
+3	/create 	POST	JSON	http://myapi-schoolexample.com/api/v1/school/create	Create new record in database	Details - link to show results
+4	/update/{id}	PUT	JSON	http://myapi-schoolexample.com/api/v1/school/update/45	Update a teacher record		Details - link to show results
+5	/delete/{id}	DELETE	JSON	http://myapi-schoolexample.com/api/v1/school/delete/23	Delete a teacher record		Details - link to show results
+	
