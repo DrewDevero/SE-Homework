@@ -108,7 +108,7 @@ section {
     padding: 0.25rem;
 }
 #calculatorSpacing {
-    height: 50%;
+    height: 25rem;
     width: 50%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr;
