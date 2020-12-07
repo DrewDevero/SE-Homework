@@ -19,6 +19,38 @@ $("form").css({
     "margin" : "1rem"
 });
 
+/*
+// user input form submit done one way:
+
+$(() => {
+    // onload we want to attach an event listener to our form w/ JQuery
+        // when form submits, we want to. . .
+        // seclet the form and add event listener to prevent reload
+    $("form").on("submit", (e) => {
+        e.preventDefault();
+    })
+    // select input field and text input
+    const userInput = $("#user-movie-input").val();
+    // take user input and tak it onto the url
+    const filledUrl = myUrl + userInput;
+    // make am ajax call using my url information and the user input
+    const promise = $.ajax({
+        url: filledUrl
+    })
+    promise.then(
+        (data) => {
+            $("#title").text(data.Title);
+            $("#year").text(data.Year);
+            $("#rated").text(data.Rating);
+        },
+        (err) => {
+            console.error(err);
+        }
+    )
+})
+*/
+// user input form submit done a slight different way
+
 $("form").on("submit", (event) => {
     event.preventDefault();
     const userInput = $('input[type="text"]').val();
@@ -36,7 +68,7 @@ $("form").on("submit", (event) => {
     // reformatting of above, listed below
 
     const promise = $.ajax({
-        url: myUrl + userInput, // http://www.omdbapi.com/?i=tt3896198&apikey=5d6e4119&t=Frozen
+        url: myUrl + userInput // http://www.omdbapi.com/?i=tt3896198&apikey=5d6e4119&t=Frozen
     })
     // Promise obj has .then AND .catch
     // .then is like a success. If your asyn function worked. Run .then - takes a callback function
