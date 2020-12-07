@@ -1,5 +1,5 @@
 // with native javascript
-// document.onloaf(() => {
+// document.onload(() => {
     //i grab information
     //from a server
 //})

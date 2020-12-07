@@ -2,6 +2,23 @@
 const apiKey = "5d6e4119";
 const myUrl = `http://www.omdbapi.com/?i=tt3896198&apikey=${apiKey}&t=`; // going to fill in with a movie title
 
+$("*").css({
+    "margin" : "0",
+    "padding" : "0"
+});
+$("h1").css({
+    "margin" : "1rem"
+});
+$("dt").css({
+    "margin" : "1rem 1rem 0rem"
+});
+$("dd").css({
+    "margin" : "0rem 1rem 0rem 2rem"
+});
+$("form").css({
+    "margin" : "1rem"
+});
+
 $("form").on("submit", (event) => {
     event.preventDefault();
     const userInput = $('input[type="text"]').val();
@@ -33,8 +50,9 @@ $("form").on("submit", (event) => {
             $("#year").html(data.Year);
             $("#rated").html(data.Rated);
         },
-        () => {
+        (err) => {
             console.log("bad request");
+            console.error(err);
         }
     );
 });
