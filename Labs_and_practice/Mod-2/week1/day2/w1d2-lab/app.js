@@ -49,6 +49,31 @@ for (let item in receipt1) {
         console.log(receipt1[item])
     }
 
+const FLEX_STYLE = {
+    display : "flex",
+    justifyContent : "space-around"
+}
+const RECEIPT_STYLE = {
+    margin : "1rem",
+    padding : "1rem",
+    border : "solid 0.25rem green"
+}
+class Receipt extends React.Component {
+    render() {
+        console.log(this.props.receipt.order.paid)
+        return (
+            <div style={RECEIPT_STYLE}>
+                <h2>{this.props.receipt.person}</h2> 
+                <h5><span>Main: </span>{this.props.receipt.order.main}</h5>
+                <h5><span>Protein: </span>{this.props.receipt.order.protein}</h5>
+                <h5><span>Rice: </span>{this.props.receipt.order.rice}</h5>
+                <h5><span>Sauce: </span>{this.props.receipt.order.sauce}</h5>
+                <h5><span>Drink: </span>{this.props.receipt.order.drink}</h5>
+                <h5><span>Cost: </span>{this.props.receipt.order.cost}</h5>
+            </div>
+        )
+    }
+}
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -63,12 +88,11 @@ class App extends React.Component {
         return (
             <div>
                 <h1>Korrila React Receipts</h1>
-                <ul>
-                    <li>{
-                        this.state.receipt1
-                    }</li>
-                </ul>
-               
+                <div style={FLEX_STYLE}>
+                    <Receipt receipt={this.state.receipt1} />
+                    <Receipt receipt={this.state.receipt2} />
+                    <Receipt receipt={this.state.receipt3} />     
+                </div>                            
             </div>
         )
     }
