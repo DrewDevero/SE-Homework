@@ -106,14 +106,16 @@ class App extends React.Component {
         super(props);
 
         this.state = {
-            nameState : "Drew Devero"
+            nameState : "Drew Devero",
+            items : ["first name", "Last Name"],
+            stateProducts : products
         }
     }
 
 
 
     componentDidMount() {
-        console.log(this.state);
+        console.log(this.state.stateProducts);
         /* products.map(item => console.log(item))
         for (let item in products) {
             console.log(products[item])
@@ -125,12 +127,12 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <h1>Testing to see if this works</h1>
+                <h1>{this.state.nameState}</h1>
                 <ul>
                     {
-                        products.map(item => 
-                            <li>{item.name}</li>
-                        )
+                     this.state.stateProducts.map(item => 
+                     <li>{item.name}</li>
+                     )
                     }
                 </ul>
             </div>

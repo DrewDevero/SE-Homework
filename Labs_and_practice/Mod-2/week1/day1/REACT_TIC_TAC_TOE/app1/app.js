@@ -17,10 +17,20 @@ class Header extends React.Component {
 };
 
 class Player extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+        players : "X, O",
+        playerX : "X",
+        playerO : "O"
+        }
+    }   
     render() {
         return (
-         <div class={this.props.whichPlayer}>
-            <h2>Player {this.props.whichPlayer}</h2>
+         <div class={this.state.players}>
+            <h2>Player {this.state.playerX}</h2>
+            <h3>Wins: </h3>
+            <h2>player {this.state.playerO}</h2>
             <h3>Wins: </h3>
          </div>
         )
