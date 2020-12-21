@@ -27,7 +27,7 @@ const receipt2 = {
     drink: 'Korchata',
     cost: 19
   },
-  paid: true
+  paid: false
 }
 const receipt3 = {
   person: 'Matt',
@@ -49,6 +49,8 @@ for (let item in receipt1) {
         console.log(receipt1[item])
     }
 
+let arrayOfReceipts = [receipt1, receipt2, receipt3];
+
 const FLEX_STYLE = {
     display : "flex",
     justifyContent : "space-around"
@@ -58,9 +60,17 @@ const RECEIPT_STYLE = {
     padding : "1rem",
     border : "solid 0.25rem green"
 }
+
 class Receipt extends React.Component {
     render() {
-        console.log(this.props.receipt.order.paid)
+        console.log(this.props.receipt.paid)
+        /* function toggle() {
+            if(this.props.receipt.paid === false) {
+                return this.props.receipt.paid = true
+            } else {
+                return this.props.receipt.paid = false
+            }
+        } */
         return (
             <div style={RECEIPT_STYLE}>
                 <h2>{this.props.receipt.person}</h2> 
@@ -70,17 +80,20 @@ class Receipt extends React.Component {
                 <h5><span>Sauce: </span>{this.props.receipt.order.sauce}</h5>
                 <h5><span>Drink: </span>{this.props.receipt.order.drink}</h5>
                 <h5><span>Cost: </span>{this.props.receipt.order.cost}</h5>
+                <button type="button" /* onclick={toggle()} */>Toggle Paid</button>
             </div>
         )
     }
 }
+
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            receipt1 : receipt1,
+            /* receipt1 : receipt1,
             receipt2 : receipt2,
-            receipt3 : receipt3
+            receipt3 : receipt3 */
+            receipts : arrayOfReceipts
         }
     }
 
@@ -89,9 +102,10 @@ class App extends React.Component {
             <div>
                 <h1>Korrila React Receipts</h1>
                 <div style={FLEX_STYLE}>
-                    <Receipt receipt={this.state.receipt1} />
-                    <Receipt receipt={this.state.receipt2} />
-                    <Receipt receipt={this.state.receipt3} />     
+                {/* {this.state.receipt1.paid ? "" : <Receipt receipt={this.state.receipt1} />}
+                {this.state.receipt2.paid ? "" : <Receipt receipt={this.state.receipt2} />}
+                {this.state.receipt3.paid ? "" : <Receipt receipt={this.state.receipt3} />}   */}
+                {this.state.receipts.map(item => item.paid ? "" : <Receipt receipt={item} />)}
                 </div>                            
             </div>
         )
