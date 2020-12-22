@@ -7,7 +7,7 @@ class App extends React.Component {
                 caps: false,
             }
         }
-        
+        this.chageIt = this.changeIt.bind(this);
     }
     changeIt = (text) => {
         if (this.state.tardis.caps) {
@@ -29,10 +29,11 @@ class App extends React.Component {
     render() {
         return(
             <div>
-                <DivOne />
-                <DivTwo />
+               {/* <DivOne />
+                 <DivTwo />
                 <DivThree />
-                <DivFour />               
+                <DivFour />  */} 
+                <h3 onClick={() => this.changeIt(this.state.tardis.name)}>{this.state.tardis.name}</h3>            
             </div>
         )
     }
