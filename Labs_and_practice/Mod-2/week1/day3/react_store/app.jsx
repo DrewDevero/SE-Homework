@@ -54,15 +54,21 @@ class App extends React.Component {
                 <h4>{this.state.price}</h4>
                 <h5>{this.state.description}</h5>
             </div>
-            <ul>
-            {this.state.products.map(product => {
-                console.log(product)
-              return (
-                /*<li>{product.name} {product.price}</li> */
-                <ProductList product={product}/> )}
-              )
-            }
-            </ul>
+            <div className="products">
+                <ul>
+                {this.state.products.map(product => {
+                    console.log(product)
+                return (
+                    /*<li>{product.name} {product.price}</li> */
+                    <ProductList product={product}/> )}
+                )
+                }
+                </ul>
+            </div>
+            <div className="cart">
+                <h3>Shoppping Cart</h3>
+                <ul></ul>
+            </div>
           </div>
         )
       }
@@ -70,10 +76,18 @@ class App extends React.Component {
  class ProductList extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            inShoppingCart: false
+        }
+        this.toggleCart = this.toggleCart.bind(this)
+    }
+
+    toggleCart() {
+        this.setState({ inShoppingCart: !this.state.inShoppingCart })
     }
     render() {
         return (
-            <li>{this.props.product.name}  {this.props.product.price}</li>
+            <li onClick={this.toggleCart}>{this.props.product.name}  {this.props.product.price} {this.state.inShoppingCart ? <span>is in the shopping cart</span> : ""}</li>
         )
     }  
 }
