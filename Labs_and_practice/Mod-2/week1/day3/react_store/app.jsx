@@ -92,7 +92,23 @@ class App extends React.Component {
     }  
 }
 
+class ShoppingCart extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <li>{this.products.name} {this.products.price}</li>
+        )
+    }
+}
+
 ReactDOM.render(
   <App />,
   document.querySelector('.container')
 )
+
+// App.js - App component - unidirectional data flow
+// Lift state
+// product props to productList component //we want to give ShoppingCart Component info
+// ProductList component - keeps track of shopping cart // ShoppingCart coponent - also needs shopping cart info
