@@ -1,5 +1,4 @@
-class DivOne extends React.Component {
-    
+class DivOne extends React.Component {  
     render() {
         return (
             <div>

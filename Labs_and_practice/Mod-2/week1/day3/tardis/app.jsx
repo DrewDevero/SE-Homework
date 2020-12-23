@@ -1,10 +1,8 @@
 class App extends React.Component {
-    
     render() {
         return(
             <div>
                 <DivOne />
-               {/*  <DivFour />   */}
             </div>
         )
     }
