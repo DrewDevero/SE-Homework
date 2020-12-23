@@ -5,9 +5,10 @@ class App extends React.Component {
             tardis : {
                 name: "Time and Relative Dimension in Space",
                 caps: false,
-            }
+            },
+            changeIt : this.changeIt.bind(this),
         }
-        this.chageIt = this.changeIt.bind(this);
+        
     }
     changeIt = (text) => {
         if (this.state.tardis.caps) {
@@ -29,11 +30,8 @@ class App extends React.Component {
     render() {
         return(
             <div>
-               {/* <DivOne />
-                 <DivTwo />
-                <DivThree />
-                <DivFour />  */} 
-                <h3 onClick={() => this.changeIt(this.state.tardis.name)}>{this.state.tardis.name}</h3>            
+                <DivOne name={this.state.tardis.name} caps={this.state.tardis.caps} changeIt={this.changeIt} />
+               {/*  <DivFour />   */}
             </div>
         )
     }

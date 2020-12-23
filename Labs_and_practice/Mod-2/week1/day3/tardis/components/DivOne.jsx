@@ -5,8 +5,7 @@ class DivOne extends React.Component {
     render() {
         return (
             <div>
-                <h3>{this.props.state.tardis.name}</h3>
-                <h3 onClick={() => this.changeIt(this.props.state.tardis.name)}>{this.props.state.tardis.name}</h3>
+                <DivTwo name={this.props.name} caps={this.props.caps} changeIt={this.props.changeIt}/>
             </div>
         )
     }
