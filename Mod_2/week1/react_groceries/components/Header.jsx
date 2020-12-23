@@ -5,7 +5,7 @@ class Header extends React.Component {
     render() {
         return(
             <header style={this.props.generalStyling && this.props.headerStyle}>
-                <h1>React Groceries!</h1>
+                <h1>react groceries!</h1>
             </header>
         )
     }

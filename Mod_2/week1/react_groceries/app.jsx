@@ -24,6 +24,7 @@ class App extends React.Component {
                 backgroundColor: "rgba(0, 189, 0, 0.75)",
                 padding: "2rem",
                 fontSize: "2rem",
+                textTransform: "capitalize",
             },
             flexCenter: {
                 display : "flex",
