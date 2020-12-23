@@ -9,8 +9,8 @@ class DivTwo extends React.Component {
     render() {
         return (
             <div>
-                <DivThree name={this.props.name} caps={this.props.caps} changeIt={this.props.changeIt}/>
-                <DivThree name={this.props.name} caps={this.props.caps} changeIt={this.props.changeIt}/>
+                <DivThree name={this.props.name} caps={this.props.caps}/>
+                <DivThree name={this.props.name} caps={this.props.caps}/>
             </div>
         )
     }

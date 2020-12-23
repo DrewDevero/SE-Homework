@@ -6,31 +6,12 @@ class App extends React.Component {
                 name: "Time and Relative Dimension in Space",
                 caps: false,
             },
-            changeIt : this.changeIt.bind(this),
-        }
-        
-    }
-    changeIt = (text) => {
-        if (this.state.tardis.caps) {
-            this.setState({
-                tardis : {
-                    name : text.toLowerCase(),   
-                    caps : false
-                }
-            })
-        } else {
-            this.setState({
-                tardis : {
-                    name : text.toUpperCase(),
-                    caps : true
-                }
-            })
         }
     }
     render() {
         return(
             <div>
-                <DivOne name={this.state.tardis.name} caps={this.state.tardis.caps} changeIt={this.changeIt} />
+                <DivOne name={this.state.tardis.name} caps={this.state.tardis.caps} />
                {/*  <DivFour />   */}
             </div>
         )
