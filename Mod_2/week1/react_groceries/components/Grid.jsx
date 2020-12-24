@@ -4,8 +4,8 @@ class Grid extends React.Component {
     }
     render() {
         return(
-            <main className={this.props.flexCenter}>
-                <article id={this.props.gridSpacing}>
+            <main className={this.props.styles.flexCenter}>
+                <article id={this.props.styles.gridSpacing}>
                 <h2>Items to appear here based on mockup</h2>
                 </article>
             </main>

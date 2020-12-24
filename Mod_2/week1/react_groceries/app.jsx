@@ -9,6 +9,8 @@ class App extends React.Component {
                 quantity: 0,
                 isPurchased: false
             },
+        }
+        this.styles = {
             centerSpacing: {
                 textAlign: "center",
             },
@@ -37,9 +39,9 @@ class App extends React.Component {
     }
     render() {
         return(
-            <div style={this.state.centerSpacing}>
-                <Header generalStyling={this.state.generalStyling} headerStyle={this.state.headerStyle}/>
-                <Grid generalStyling={this.state.generalStyling} flexCenter={this.state.flexCenter} gridSpacing={this.state.gridSpacing} />
+            <div style={this.styles.centerSpacing}>
+                <Header styles={this.styles}/>
+                <Grid styles={this.styles} />
             </div>
         )
     }
