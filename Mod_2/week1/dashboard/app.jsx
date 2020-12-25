@@ -74,7 +74,7 @@ const gridSpacing = {
 }
 
 const analiticsGridTemplate = {
-    height: "50rem",
+    height: "47rem",
     width: "56rem",
     display: "grid",
     gridTemplateColumns : "14rem 14rem 14rem 14rem",
