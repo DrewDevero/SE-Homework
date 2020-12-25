@@ -21,31 +21,36 @@ const navigation = {
     gridArea : "navigation",
     backgroundColor : "rgba(104, 104, 104, 0.25)",
     margin: "1rem",
-    paddingTop: "9rem"
+    paddingTop: "9rem",
+    boxShadow : "1rem 0rem 1rem rgba(23,189,33,0.4), -1rem 0rem 0.5rem rgba(23,22,189,0.4)",
 }
 const reviews = {
     gridArea : "reviews",
     backgroundColor : "rgba(104, 104, 104, 0.25)",
     margin: "1rem",
-    padding : "0.5rem"
+    padding : "0.5rem",
+    boxShadow : "1rem 0rem 1rem rgba(23,189,33,0.4), -1rem 0rem 0.5rem rgba(23,22,189,0.4)",
 }
 const average = {
     gridArea : "average",
     backgroundColor : "rgba(104, 104, 104, 0.25)",
     margin: "1rem",
-    padding : "0.5rem"
+    padding : "0.5rem",
+    boxShadow : "1rem 0rem 1rem rgba(23,189,33,0.4), -1rem 0rem 0.5rem rgba(23,22,189,0.4)",
 }
 const sentiment = {
     gridArea : "sentiment",
     backgroundColor : "rgba(104, 104, 104, 0.25)",
     margin: "1rem",
-    padding : "0.5rem"
+    padding : "0.5rem",
+    boxShadow : "1rem 0rem 1rem rgba(23,189,33,0.4), -1rem 0rem 0.5rem rgba(23,22,189,0.4)",
 }
 const visitors = {
     gridArea : "visitors",
     backgroundColor : "rgba(104, 104, 104, 0.25)",
     margin: "1rem",
-    padding : "0.5rem"
+    padding : "0.5rem",
+    boxShadow : "1rem 0rem 1rem rgba(23,189,33,0.4), -1rem 0rem 0.5rem rgba(23,22,189,0.4)",
 }
 const visitorsDivSpacing = {
     display : "flex",
@@ -56,7 +61,8 @@ const innerVisitors = {
     marginTop : "3rem",
     padding : "1rem",
     height : "10rem",
-    width : "82%"
+    width : "82%",
+    boxShadow : "1rem 0rem 1rem rgba(23,189,33,0.4), -1rem 0rem 0.5rem rgba(23,22,189,0.4)",
 }
 const gridTextSpacing = {
     textAlign : "center"
@@ -78,7 +84,8 @@ const analiticsGridTemplate = {
         "navigation visitors visitors visitors"
     `,
     backgroundColor : "rgba(104, 104, 104, 0.10)",
-    padding : "3rem 0.5rem 1rem 0.5rem"
+    padding : "3rem 0.5rem 1rem 0.5rem",
+    boxShadow : "1rem 0rem 1rem rgba(0,0,255,0.2), -1rem 0rem 0.5rem silver",
 }
 
 
