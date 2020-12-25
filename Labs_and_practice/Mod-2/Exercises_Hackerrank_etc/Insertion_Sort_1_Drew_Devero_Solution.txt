@@ -1,0 +1,30 @@
+function insertionSort1(n, arr) {
+    let arrayOfNums = [];
+    let numsToSort = []
+    if(!(1 <= n <= 1000)) {
+        ""
+    } else {
+        for(let i = 0; i < arr.length; i++) {
+            arrayOfNums.push(arr[i]);
+            arr[i] > arr[i-1] || i === 0  ? "" : numsToSort.push(arr[i]); 
+        }
+        for(let j = arr.length - 2; j >= 0; j--) {
+            if (numsToSort[0] < arr[j] && j !== 0) {
+                arrayOfNums.splice(j+1, 1, arr[j]);
+                console.log(arrayOfNums.join(" "));
+            } else if (numsToSort[0] < arr[j] && j === 0) {
+                 arrayOfNums.splice(j+1, 1, arr[j]);
+                console.log(arrayOfNums.join(" "));
+                arrayOfNums.splice(j, 1, numsToSort[0]);
+                console.log(arrayOfNums.join(" "));
+                numsToSort.shift();
+            } else if (numsToSort[0] > arr[j] && numsToSort !== null) {
+                arrayOfNums.splice(j+1,1,numsToSort[0]);
+                console.log(arrayOfNums.join(" "));
+                numsToSort.shift();
+            } else if (numsToSort === null) {
+                console.log(arrayOfNums.join(" "));
+            }
+        }
+    }
+}
