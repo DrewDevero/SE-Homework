@@ -2,13 +2,13 @@ class Grid extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            /* groceryItems : { */
+            groceryItems : {
                 item: "",
                 brand: "",
                 units: "",
                 quantity: 0,
                 isPurchased: false
-            /* }, */
+            },
         }
     } 
     render() {
@@ -20,10 +20,13 @@ class Grid extends React.Component {
                         const handleSubmit = event => {
                             event.preventDefault();
                             const USER_INPUT = parseInt(document.getElementsByClassName("userInput")[index].value);
-                            !this.state/* .groceryItems */.isPurchased ?  
-                                (this.setState({quantity : this.state.quantity + USER_INPUT, units : this.state.units - 1, isPurchased : true}), console.log("foo", this.state, USER_INPUT)) :
+                            const SHOPPING_CART = document.getElementById("shoppingCart");
+                            !this.state.groceryItems.isPurchased ?  
+                                ((this.setState({...this.state.groceryItmes, quantity : this.state.groceryItems.quantity + USER_INPUT, units : this.state.groceryItems.units - 1, isPurchased : true}), console.log("foo", this.state, USER_INPUT)),
+                                SHOPPING_CART.innerText = `Item: ${item.item}\nQuantity: ${this.state.groceryItems.quantity.toString()}` 
+                                ) :
                                 /* (this.setState({isPurchased : false}), console.log("bar", this.state, USER_INPUT)) */
-                                (this.setState({quantity : this.state.quantity + USER_INPUT, units : this.state.units - 1}), console.log("bar", this.state, USER_INPUT))
+                                ((this.setState({...this.state.groceryItems, quantity : this.state.groceryItems.quantity + USER_INPUT, units : this.state.groceryItems.units - 1}), console.log("bar", this.state, USER_INPUT)), SHOPPING_CART.innerText = `Item: ${item.item}\nQuantity: ${this.state.groceryItems.quantity.toString()}`)
                         }   
                         if(!item.isPurchased) {
                             return(<h2 key={item.id} style={this.props.styles[index]}>Sold Out</h2>)

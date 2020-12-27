@@ -5,7 +5,7 @@ class ShoppingCart extends React.Component {
     render() {
         return(
             <div style={this.props.styles.shoppingCartDiv}>
-                <button type="button" style={this.props.styles.shoppingCartStyle}>Shopping Cart</button>
+                <button id="shoppingCart" type="button" style={this.props.styles.shoppingCartStyle}>Shopping Cart</button>
             </div>
         )
     }
