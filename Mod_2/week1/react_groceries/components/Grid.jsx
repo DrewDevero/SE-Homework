@@ -21,7 +21,7 @@ class Grid extends React.Component {
                             const SHOPPING_CART = document.getElementById("shoppingCart");
                             !this.state.isPurchased ?  
                                 ((this.setState({quantity : this.state.quantity + USER_INPUT, units : this.state.units - 1, isPurchased : true}), console.log("foo", this.state, USER_INPUT)),
-                                SHOPPING_CART.innerText = `Item: ${item.item}\nQuantity: ${this.state.quantity.toString()}` 
+                                SHOPPING_CART.innerText = `Item: ${item.item}\nQuantity: ${this.state.quantity.toString()}`
                                 ) :
                                 /* (this.setState({isPurchased : false}), console.log("bar", this.state, USER_INPUT)) */
                                 ((this.setState({quantity : this.state.quantity + USER_INPUT, units : this.state.units - 1}), console.log("bar", this.state, USER_INPUT)), SHOPPING_CART.innerText = `Item: ${item.item}\nQuantity: ${this.state.quantity.toString()}`
