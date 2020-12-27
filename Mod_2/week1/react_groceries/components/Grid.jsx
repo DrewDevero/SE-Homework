@@ -24,10 +24,18 @@ class Grid extends React.Component {
                                 SHOPPING_CART.innerText = `Item: ${item.item}\nQuantity: ${this.state.quantity.toString()}` 
                                 ) :
                                 /* (this.setState({isPurchased : false}), console.log("bar", this.state, USER_INPUT)) */
-                                ((this.setState({quantity : this.state.quantity + USER_INPUT, units : this.state.units - 1}), console.log("bar", this.state, USER_INPUT)), SHOPPING_CART.innerText = `Item: ${item.item}\nQuantity: ${this.state.quantity.toString()}`)
+                                ((this.setState({quantity : this.state.quantity + USER_INPUT, units : this.state.units - 1}), console.log("bar", this.state, USER_INPUT)), SHOPPING_CART.innerText = `Item: ${item.item}\nQuantity: ${this.state.quantity.toString()}`
+                                )
                         }   
                         if(!item.isPurchased) {
-                            return(<h2 key={item.id} style={this.props.styles[index]}>Sold Out</h2>)
+                            return(
+                                <div key={item.id}>
+                                    <h2 style={this.props.styles[index]}>Sold Out</h2>
+                                    <div style={this.props.styles.noDisplay}>
+                                        <input className="userInput" style={this.props.styles.inputStyle} type="text" placeholder="Add how many to cart?"></input><button type="submit" style={this.props.styles.buttonStyle} onClick={handleSubmit}>Add to cart</button>
+                                    </div>
+                                </div>
+                            )
                         } else {
                             return(
                                 <ul key={item.id} style={this.props.styles[index]}>

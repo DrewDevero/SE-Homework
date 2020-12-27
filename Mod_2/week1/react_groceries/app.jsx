@@ -2,6 +2,9 @@ class App extends React.Component {
     constructor(props) {
     super(props);
         this.styles = {
+            noDisplay: {
+                display : "none",
+            },
             centerSpacing: {
                 textAlign: "center",
             },
