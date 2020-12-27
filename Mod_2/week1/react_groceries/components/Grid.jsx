@@ -2,13 +2,13 @@ class Grid extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            groceryItems : {
+            /* groceryItems : { */
                 item: "",
                 brand: "",
                 units: "",
                 quantity: 0,
                 isPurchased: false
-            },
+            /* }, */
         }
     } 
     render() {
@@ -19,9 +19,11 @@ class Grid extends React.Component {
                     {groceryItems.map((item, index) => {
                         const handleSubmit = event => {
                             event.preventDefault();
-                            !this.state.groceryItems.isPurchased ?  
-                                (this.setState({[this.state.groceryItems.isPurchased] : true}), [groceryItems.quantity = groceryItems.quantity - 1], console.log("foo"), console.log(this.state)) :
-                                (this.setState({[this.state.groceryItems.isPurchased] : false}), console.log("bar"),console.log(this.state))
+                            const USER_INPUT = parseInt(document.getElementsByClassName("userInput")[index].value);
+                            !this.state/* .groceryItems */.isPurchased ?  
+                                (this.setState({quantity : this.state.quantity + USER_INPUT, units : this.state.units - 1, isPurchased : true}), console.log("foo", this.state, USER_INPUT)) :
+                                /* (this.setState({isPurchased : false}), console.log("bar", this.state, USER_INPUT)) */
+                                (this.setState({quantity : this.state.quantity + USER_INPUT, units : this.state.units - 1}), console.log("bar", this.state, USER_INPUT))
                         }   
                         if(!item.isPurchased) {
                             return(<h2 key={item.id} style={this.props.styles[index]}>Sold Out</h2>)
@@ -33,7 +35,7 @@ class Grid extends React.Component {
                                     <li>{item.brand}</li>
                                     <li>Units: {item.units}</li>
                                     <li>Quantity: {item.quantity}</li>
-                                    <input style={this.props.styles.inputStyle} type="text" placeholder="Add how many to cart?"></input><button type="submit" style={this.props.styles.buttonStyle} onClick={handleSubmit}>Add to cart</button>
+                                    <input className="userInput" style={this.props.styles.inputStyle} type="text" placeholder="Add how many to cart?"></input><button type="submit" style={this.props.styles.buttonStyle} onClick={handleSubmit}>Add to cart</button>
                                     </h2>
                                 </ul>
                             )
