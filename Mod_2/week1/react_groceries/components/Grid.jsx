@@ -17,15 +17,31 @@ class Grid extends React.Component {
                     {groceryItems.map((item, index) => {
                         const handleSubmit = event => {
                             event.preventDefault();
-                            const USER_INPUT = parseInt(document.getElementsByClassName("userInput")[index].value);
-                            const SHOPPING_CART = document.getElementById("shoppingCart");
-                            !this.state.isPurchased ?  
-                                ((this.setState({quantity : this.state.quantity + USER_INPUT, units : this.state.units - 1, isPurchased : true}), console.log("foo", this.state, USER_INPUT)),
-                                SHOPPING_CART.innerText = `Item: ${item.item}\nQuantity: ${this.state.quantity.toString()}`
-                                ) :
-                                /* (this.setState({isPurchased : false}), console.log("bar", this.state, USER_INPUT)) */
-                                ((this.setState({quantity : this.state.quantity + USER_INPUT, units : this.state.units - 1}), console.log("bar", this.state, USER_INPUT)), SHOPPING_CART.innerText = `Item: ${item.item}\nQuantity: ${this.state.quantity.toString()}`
-                                )
+                            let userInput = 0;
+                                parseInt(document.getElementsByClassName("userInput")[index].value) >= 0 ? 
+                                    userInput += parseInt(document.getElementsByClassName("userInput")[index].value) 
+                                : 
+                                    "";
+                                const SHOPPING_CART = document.getElementById("shoppingCart");
+                            if(item.quantity > 0 && userInput > 0 && userInput <= item.quantity) {
+                                !this.state.isPurchased ?  
+                                    (this.setState({quantity : this.state.quantity + userInput, units : this.state.units - 1, isPurchased : true}, () => {
+                                        SHOPPING_CART.innerText = `Item: ${item.item}\nQuantity: ${this.state.quantity.toString()}`, console.log("foo", this.state, userInput)
+                                        }
+                                    ),
+                                    item.quantity--
+                                    )
+                                :
+                                    /* (this.setState({isPurchased : false}), console.log("bar", this.state, USER_INPUT)) */
+                                    (this.setState({quantity : this.state.quantity + userInput, units : this.state.units - 1}, () => {
+                                        SHOPPING_CART.innerText = `Item: ${item.item}\nQuantity: ${this.state.quantity.toString()}`, console.log("bar", this.state, userInput)
+                                        }
+                                    ), 
+                                    item.quantity--
+                                    )    
+                            } else {
+                                "";
+                            }
                         }   
                         if(!item.isPurchased) {
                             return(
