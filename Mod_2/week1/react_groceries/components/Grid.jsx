@@ -11,10 +11,11 @@ class Grid extends React.Component {
     } 
     render() {
         return(
+            <div>
             <main style={this.props.styles.flexCenter}>
                 <div>
                     <article style={this.props.styles.gridSpacing}>
-                    {groceryItems.map((item, index) => {
+                    {groceryItems.map((product, index) => {
                         const handleSubmit = event => {
                             event.preventDefault();
                             let userInput = 0;
@@ -23,28 +24,28 @@ class Grid extends React.Component {
                                 : 
                                     "";
                                 const SHOPPING_CART = document.getElementById("shoppingCart");
-                            if(item.quantity > 0 && userInput > 0 && userInput <= item.quantity) {
+                            if(product.quantity > 0 && userInput > 0 && userInput <= product.quantity) {
                                 !this.state.isPurchased ?  
-                                    (this.setState({quantity : this.state.quantity + userInput, units : this.state.units - 1, isPurchased : true}, () => {
-                                        SHOPPING_CART.innerText = `Item: ${item.item}\nQuantity: ${this.state.quantity.toString()}`, console.log("foo", this.state, userInput)
+                                    (this.setState({item : product.item, quantity : this.state.quantity + userInput, units : this.state.units - 1, isPurchased : true}, () => {
+                                        SHOPPING_CART.innerText = `Item: ${product.item}\nQuantity: ${this.state.quantity.toString()}`, console.log("foo", this.state, userInput)
                                         }
                                     ),
-                                    item.quantity--
+                                    product.quantity -= userInput
                                     )
                                 :
-                                    (this.setState({quantity : this.state.quantity + userInput, units : this.state.units - 1}, () => {
-                                        SHOPPING_CART.innerText = `Item: ${item.item}\nQuantity: ${this.state.quantity.toString()}`, console.log("bar", this.state, userInput);
+                                    (this.setState({item : product.item, quantity : this.state.quantity + userInput, units : this.state.units - 1}, () => {
+                                        SHOPPING_CART.innerText = `Item: ${product.item}\nQuantity: ${this.state.quantity.toString()}`, console.log("bar", this.state, userInput);
                                         }
                                     ),
-                                    item.quantity--
+                                    product.quantity -= userInput
                                     )    
                             } else {
                                 "";
                             }
                         }   
-                        if(!item.isPurchased) {
+                        if(!product.isPurchased) {
                             return(
-                                <div key={item.id}>
+                                <div key={product.id}>
                                     <h2 style={this.props.styles[index]}>Sold Out</h2>
                                     <div style={this.props.styles.noDisplay}>
                                         <input className="userInput" style={this.props.styles.inputStyle} type="text" placeholder="Add how many to cart?"></input><button type="submit" style={this.props.styles.buttonStyle} onClick={handleSubmit}>Add to cart</button>
@@ -53,12 +54,12 @@ class Grid extends React.Component {
                             )
                         } else {
                             return(
-                                <ul key={item.id} style={this.props.styles[index]}>
+                                <ul key={product.id} style={this.props.styles[index]}>
                                     <h2>
-                                    <li>{item.item}</li>
-                                    <li>{item.brand}</li>
-                                    <li>Units: {item.units}</li>
-                                    <li>Quantity: {item.quantity}</li>
+                                    <li>{product.item}</li>
+                                    <li>{product.brand}</li>
+                                    <li>Units: {product.units}</li>
+                                    <li>Quantity: {product.quantity}</li>
                                     <input className="userInput" style={this.props.styles.inputStyle} type="text" placeholder="Add how many to cart?"></input><button type="submit" style={this.props.styles.buttonStyle} onClick={handleSubmit}>Add to cart</button>
                                     </h2>
                                 </ul>
@@ -68,6 +69,8 @@ class Grid extends React.Component {
                     </article>
                 </div>
             </main>
+                <Remove {...this.state} />
+            </div>
         )
     }
 }

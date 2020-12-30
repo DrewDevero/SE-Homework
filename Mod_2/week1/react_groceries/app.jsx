@@ -115,7 +115,7 @@ class App extends React.Component {
                 color : "rgba(0,0,0,0.5)",
                 fontWeight : "bold",
                 boxShadow : "1rem 1rem 1rem rgba(140,140,140, 0.5)",
-                backgroundColor: "rgba(255,14,14,0.75)",
+                backgroundColor: "rgba(0, 189, 0, 0.75)",
                 cursor: "pointer",
                 border: "none",
                 outline: "none",
@@ -129,7 +129,6 @@ class App extends React.Component {
                 <Header styles={this.styles}/>
                 <Grid styles={this.styles} />
                 <ShoppingCart styles={this.styles}/>
-                <Remove styles={this.styles} />
             </div>
         )
     }
