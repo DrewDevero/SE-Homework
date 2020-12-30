@@ -32,11 +32,10 @@ class Grid extends React.Component {
                                     item.quantity--
                                     )
                                 :
-                                    /* (this.setState({isPurchased : false}), console.log("bar", this.state, USER_INPUT)) */
                                     (this.setState({quantity : this.state.quantity + userInput, units : this.state.units - 1}, () => {
-                                        SHOPPING_CART.innerText = `Item: ${item.item}\nQuantity: ${this.state.quantity.toString()}`, console.log("bar", this.state, userInput)
+                                        SHOPPING_CART.innerText = `Item: ${item.item}\nQuantity: ${this.state.quantity.toString()}`, console.log("bar", this.state, userInput);
                                         }
-                                    ), 
+                                    ),
                                     item.quantity--
                                     )    
                             } else {
@@ -66,9 +65,6 @@ class Grid extends React.Component {
                             )
                         }
                     })}
-                        {/* <h2 style={this.props.styles.item1}>{groceryItems[0].item}</h2>
-                        <h2 style={this.props.styles.item2}>{groceryItems[1].item}</h2>
-                        <h2 style={this.props.styles.item3}>{groceryItems[2].item}</h2> */}
                     </article>
                 </div>
             </main>

@@ -129,6 +129,7 @@ class App extends React.Component {
                 <Header styles={this.styles}/>
                 <Grid styles={this.styles} />
                 <ShoppingCart styles={this.styles}/>
+                <Remove styles={this.styles} />
             </div>
         )
     }
