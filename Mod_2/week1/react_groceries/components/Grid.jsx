@@ -8,22 +8,29 @@ class Grid extends React.Component {
                 quantity: 0,
                 isPurchased: false
         }
-    } 
+    }
+
+
     render() {
         return(
             <div>
             <main style={this.props.styles.flexCenter}>
                 <div>
                     <article style={this.props.styles.gridSpacing}>
+{/*map over grocery list items from groceryList.js*/}
                     {groceryItems.map((product, index) => {
                         const handleSubmit = event => {
                             event.preventDefault();
                             let userInput = 0;
+{/*if input is greater than 0 use the input */}
                                 parseInt(document.getElementsByClassName("userInput")[index].value) >= 0 ? 
                                     userInput += parseInt(document.getElementsByClassName("userInput")[index].value) 
                                 : 
                                     "";
-                                const SHOPPING_CART = document.getElementById("shoppingCart");
+{/* If quatity of groceryList.js is greater than 0 then */}
+{/* If purchased is false, then turn state isPurchased to true and remove 1 from groceryList.js quantity and show in shopping cart*/}
+{/* Else, remove 1 from groceryList.js quantity and show in shopping cart*/}
+                            const SHOPPING_CART = document.getElementById("shoppingCart");
                             if(product.quantity > 0 && userInput > 0 && userInput <= product.quantity) {
                                 !this.state.isPurchased ?  
                                     (this.setState({item : product.item, quantity : this.state.quantity + userInput, units : this.state.units - 1, isPurchased : true}, () => {
