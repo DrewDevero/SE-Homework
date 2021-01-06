@@ -3,57 +3,74 @@ import axios from "axios";
 
 const WINES_URL = 'http://myapi-profstream.herokuapp.com/api/bd8bee/wines'
 
-export default class Wines extends React.Component {
+class Wines extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {}
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleDelete = this.handleDelete.bind(this);
   }
+
   async getWines() {
     try {
       const res = await axios.get(WINES_URL);
-      this.setState({ wines: res.data });
-    } catch(err) {
-      console.error(err);
+      //console.log(res.data)
+      this.setState({ wines: res.data })
+    } catch(e) {
+      console.error(e);
     }
   }
   componentDidMount() {
     this.getWines();
   }
-  handleChange(e) {
+
+  handleChange(e){
+    /*  DESTRUCTING >>
+    e.target.name
+    e.target.value */    
     const { name, value } = e.target;
-    // e.target.name
-    // e.target.value
-    this.setState({ [name]: value })
+    //console.log(name, value)
+    this.setState( { [name]: value } )
   }
+
   async handleSubmit(e) {
+    //console.log('something')
+    /* DESTRUCTING >>
+    this.state.name
+    this.state.year
+    this.state.grapes */
     e.preventDefault();
-    // this.state.name
-    // this.state.year
-    // this.state.grapes
     const { name, year, grapes, country, region, description, picture, price } = this.state;
     const wine = { name, year, grapes, country, region, description, picture, price };
     try {
       const res = await axios.post(WINES_URL, wine);
       console.log(res.data);
+
       const updateRes = await axios.get(WINES_URL);
-      this.setState({ wines: updateRes.data });
+      this.setState( { wines: updateRes.data } )
     } catch(e) {
-      console.error(e.message);
+      console.error (e);
     }
+    //console.log( { name, year, grapes, country, region, description, picture, price } );
+    //const lastName = "wang";
+    //console.log( { lastName })
+    // const obj = { name: 'nicole', lastName: "wang" }
   }
+
   async handleDelete(id) {
-    try {
-      const res = await axios.delete(WINES_URL + id); // target wine id
+    console.log(WINES_URL + id);
+    try{
+      const res = await axios.delete(WINES_URL + '/' + id); // target wine id
       console.log(res.data);
+
       const updateRes = await axios.get(WINES_URL);
-      this.setState({ wines: updateRes.data });
-    } catch(er) {
-      console.error(er.message)
+      this.setState( { wines: updateRes.data } )
+    } catch(e) {
+      console.error(e.message)
     }
   }
+
   render() {
     return (
       <div className="wines">
@@ -61,51 +78,54 @@ export default class Wines extends React.Component {
           {/* render info */}
           {
             this.state.wines && this.state.wines.map(wine => (
-              <li key={wine.id}>
-                { wine.name }: price { wine.price } <button onClick={ () => this.handleDelete(wine.id) }>Delete wine</button>
+              <li id={ wine.id }>
+                { wine.name }: price { wine.price }
+                <button onClick={ () => this.handleDelete(wine.id) }>Delete wine</button>
               </li>
-            ))
+              ))
           }
         </ul>
         <form className="new-wine-form"
           onChange={ this.handleChange }
-          onSubmit={ this.handleSubmit }>
+          onSubmit={ this.handleSubmit }
+          >
           <label>
-            Wine name:
+            Wine Name:
             <input type="text" name="name" />
-          </label>
+          </label><br></br>
           <label>
             Year wine was made:
             <input type="text" name="year" />
-          </label>
+          </label><br></br>
           <label>
             Grapes used:
             <input type="text" name="grapes" />
-          </label>
+          </label><br></br>
           <label>
             Country of wine:
             <input type="text" name="country" />
-          </label>
+          </label><br></br>
           <label>
-            Wine region:
+            Wine Region:
             <input type="text" name="region" />
-          </label>
+          </label><br></br>
           <label>
             Description of wine:
             <input type="text" name="description" />
-          </label>
+          </label><br></br>
           <label>
             Picture url:
             <input type="text" name="picture" />
-          </label>
+          </label><br></br>
           <label>
             Price:
             <input type="text" name="price" />
-          </label>
+          </label><br></br>
           <input type="submit" />
         </form>
-      </div>
+    </div>
     )
   }
 }
 
+export default Wines;

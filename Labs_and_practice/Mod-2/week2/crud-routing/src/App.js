@@ -15,7 +15,7 @@ import People from "./People";
 import Books from "./Books";
 import Home from "./Home";
 
-export default class App extends React.Component {
+class App extends React.Component {
   
   render() {
     return (
@@ -54,3 +54,5 @@ export default class App extends React.Component {
     );
   }
 }
+
+export default App;

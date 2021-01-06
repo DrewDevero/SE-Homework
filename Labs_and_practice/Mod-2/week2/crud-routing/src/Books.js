@@ -3,7 +3,7 @@ import axios from "axios";
 
 const BOOKS_URL = 'http://myapi-profstream.herokuapp.com/api/cccb55/books'
 
-export default class Books extends React.Component {
+class Books extends React.Component {
     constructor(props) {
         super(props);
         this.state = {}
@@ -97,3 +97,5 @@ export default class Books extends React.Component {
     )
   }
 }
+
+export default Books;
