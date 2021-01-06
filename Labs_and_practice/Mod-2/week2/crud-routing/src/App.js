@@ -36,9 +36,6 @@ class App extends React.Component {
             </li>
           </ul>
           <Switch>
-            <Route path="/">
-              <Home />
-            </Route>
             <Route path="/wines">
               <Wines />
             </Route>
@@ -47,6 +44,9 @@ class App extends React.Component {
             </Route>
             <Route path="/books">
               <Books />
+            </Route>
+            <Route path="/">
+              <Home />
             </Route>
           </Switch>
         </div>
