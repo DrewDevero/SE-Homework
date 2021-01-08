@@ -10,6 +10,9 @@ class Wines extends React.Component {
     this.state = {}
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.selectWine = this.selectWine.bind(this);
+    this.editWine = this.editWine.bind(this);
+    this.submitEditedWine = this.submitEditedWine(this);
   }
 
   async getWines() {
@@ -70,6 +73,30 @@ class Wines extends React.Component {
       console.error(e.message)
     }
   }
+  selectWine(selectedWine) {
+    this.setState({ selectedWine })
+    console.log(selectedWine);
+  }
+
+  editWine(e) {
+    const {name, value} = e.target;
+    this.setState({...this.state, selectedWine: {...this.state.selectedWine, [name]: value} })
+  }
+
+  async submitEditedWine() {
+    try {
+      const editedWine = this.state.selectedWine; // this obj has an id
+      console.log(editedWine) // to send our patch to url + /:id
+      const focusWine = WINES_URL + editedWine.id
+      await axios.patch(focusWine, editedWine);
+      const resRefresh = await axios.get(WINES_URL);
+      this.setState({ wines : resRefresh.data })
+    } catch(err) {
+        console.log(err)
+    } finally {
+        console.log("Patch attempt to wines made")
+    }
+  }
 
   render() {
     return (
@@ -81,6 +108,7 @@ class Wines extends React.Component {
               <li key={ wine.id }id={ wine.id }>
                 { wine.name }: price { wine.price }
                 <button onClick={ () => this.handleDelete(wine.id) }>Delete wine</button>
+                <button onClick={ () => this.selectWine(wine) }>Edit wine</button>
               </li>
               ))
           }
@@ -123,6 +151,45 @@ class Wines extends React.Component {
           </label><br></br>
           <input type="submit" />
         </form>
+
+        <hr/>
+      {
+        this.state.selectedWine && <form className="wine-edit-form">
+          <label>
+            Wine Name:
+            <input type="text" name="name" defaultValue={ this.state.selectedWine.name } />
+          </label><br></br>
+          <label>
+            Year wine was made:
+            <input type="text" name="year" defaultValue={ this.state.selectedWine.year } />
+          </label><br></br>
+          <label>
+            Grapes used:
+            <input type="text" name="grapes" defaultValue={ this.state.selectedWine.grapes } />
+          </label><br></br>
+          <label>
+            Country of wine:
+            <input type="text" name="country" defaultValue={ this.state.selectedWine.country } />
+          </label><br></br>
+          <label>
+            Wine Region:
+            <input type="text" name="region" defaultValue={ this.state.selectedWine.region } />
+          </label><br></br>
+          <label>
+            Description of wine:
+            <input type="text" name="description" defaultValue={ this.state.selectedWine.description } />
+          </label><br></br>
+          <label>
+            Picture url:
+            <input type="text" name="picture" defaultValue={ this.state.selectedWine.picture }/>
+          </label><br></br>
+          <label>
+            Price:
+            <input type="text" name="price" defaultValue={ this.state.selectedWine.price }/>
+          </label><br></br>
+          <input type="submit" />
+        </form>
+      }
     </div>
     )
   }
