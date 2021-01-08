@@ -78,7 +78,7 @@ class Wines extends React.Component {
           {/* render info */}
           {
             this.state.wines && this.state.wines.map(wine => (
-              <li id={ wine.id }>
+              <li key={ wine.id }id={ wine.id }>
                 { wine.name }: price { wine.price }
                 <button onClick={ () => this.handleDelete(wine.id) }>Delete wine</button>
               </li>
