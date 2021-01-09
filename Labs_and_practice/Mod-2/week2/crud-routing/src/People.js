@@ -123,22 +123,23 @@ class People extends React.Component {
 
         <hr/>
       {
-        <form className="new-person-form">
+        this.state.selectedPerson && <form className="new-person-form" onChange={ () => this.editPerson }
+          onSubmit={ () => this.submitEditedPerson }>
           <label>
             First Name:
-            <input type="text" name="firstname" />
+            <input type="text" name="firstname" defaultValue = { this.state.selectedPerson.firstname }/>
           </label>
           <label>
             Last Name:
-            <input type="text" name="lastname" />
+            <input type="text" name="lastname" defaultValue = { this.state.selectedPerson.lastname } />
           </label>
           <label>
             Email:
-            <input type="text" name="email" />
+            <input type="text" name="email" defaultValue = { this.state.selectedPerson.email } />
           </label>
           <label>
             Username:
-            <input type="text" name="username" />
+            <input type="text" name="username" defaultValue = { this.state.selectedPerson.username } />
           </label>
           <input type="submit" />
         </form>

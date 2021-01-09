@@ -64,8 +64,7 @@ class Books extends React.Component {
   }
 
   selectBook(selectedBook) {
-    this.seetState({ selectedBook });
-    console.log(selectedBook);
+    this.setState({ selectedBook });
   }
 
   editBook(e) {
@@ -75,9 +74,9 @@ class Books extends React.Component {
 
   async submitEditedBook() {
     try {
-      const editedWine = this.state.selectedBook;
-      const focusWine = BOOKS_URL + editedWine.id;
-      await axios.patch(focusWine, editedWine);
+      const editedBook = this.state.selectedBook;
+      const focusBook = BOOKS_URL + editedBook.id;
+      await axios.patch(focusBook, editedBook);
       const resRefresh = await axios.get(BOOKS_URL);
       this.setState({ books: resRefresh.data });
     } catch(err) {
@@ -95,7 +94,7 @@ class Books extends React.Component {
           {
             this.state.books && this.state.books.map(book => (
               <li key={book.id}>
-                { book.title }: Author { book.author } <button onClick={ () => this.handleDelete(book.id) }>Delete Book</button> <button onClick={ () => this.selectedBook(book) }>Edit Book</button>
+                { book.title }: Author { book.author } <button onClick={ () => this.handleDelete(book.id) }>Delete Book</button> <button onClick={ () => this.selectBook(book) }>Edit Book</button>
               </li>
             ))
           }
@@ -124,22 +123,23 @@ class Books extends React.Component {
 
         <hr/>
       {
-        this.state.selectedBook && <form className="new-book-form">
+        this.state.selectedBook && <form className="new-book-form" onChange={ () => this.editBook }
+          onSubmit={ () => this.submitEditedBook }>
           <label>
             Book Title:
-            <input type="text" name="title" />
+            <input type="text" name="title" defaultValue={ this.state.selectedBook.title } />
           </label>
           <label>
             Author:
-            <input type="text" name="author" />
+            <input type="text" name="author" defaultValue={ this.state.selectedBook.author } />
           </label>
           <label>
             Release Date:
-            <input type="text" name="release_date" />
+            <input type="text" name="release_date" defaultValue={ this.state.selectedBook.release_date } />
           </label>
           <label>
             Image:
-            <input type="text" name="image" />
+            <input type="text" name="image" defaultValue={ this.state.selectedBook.image } />
           </label>
           <input type="submit" />
         </form>

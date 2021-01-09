@@ -10,6 +10,7 @@ class Wines extends React.Component {
     this.state = {}
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
     this.selectWine = this.selectWine.bind(this);
     this.editWine = this.editWine.bind(this);
     this.submitEditedWine = this.submitEditedWine(this);
@@ -114,8 +115,8 @@ class Wines extends React.Component {
           }
         </ul>
         <form className="new-wine-form"
-          onChange={ this.handleChange }
-          onSubmit={ this.handleSubmit }
+          onChange={ ()=> this.handleChange }
+          onSubmit={ () => this.handleSubmit }
           >
           <label>
             Wine Name:
@@ -154,7 +155,7 @@ class Wines extends React.Component {
 
         <hr/>
       {
-        this.state.selectedWine && <form className="wine-edit-form">
+        this.state.selectedWine && <form className="wine-edit-form" onChange={ () => this.editWine } onSubmit={ () => this.submitEditedWine }>
           <label>
             Wine Name:
             <input type="text" name="name" defaultValue={ this.state.selectedWine.name } />
@@ -187,7 +188,7 @@ class Wines extends React.Component {
             Price:
             <input type="text" name="price" defaultValue={ this.state.selectedWine.price }/>
           </label><br></br>
-          <input type="submit" />
+          <input type="submit"/>
         </form>
       }
     </div>
