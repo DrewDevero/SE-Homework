@@ -10,6 +10,9 @@ class People extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
+        this.selectPerson = this.selectPerson.bind(this);
+        this.editPerson = this.editPerson.bind(this);
+        this.submitEditedPerson = this.submitEditedPerson.bind(this);
     }
 
     async getAllPeople() {
@@ -59,6 +62,30 @@ class People extends React.Component {
       console.error(er.message)
     }
   }
+
+  selectPerson(selectedPerson) {
+    this.setState({ selectedPerson });
+  }
+
+  editPerson(e) {
+    const { name, value } = e.target;
+    this.setState({...this.state, selectedPerson: {...this.state.selectedPerson, [name]: value}})
+  }
+
+  async submitEditedPerson() {
+    try {
+      const editedPerson = this.state.selectPerson;
+      const focusPerson = PEOPLE_URL + editedPerson.id;
+      await axios.patch(...this.state, focusPerson);
+      const resRefresh = await axios.get(PEOPLE_URL);
+      this.setState({ people: resRefresh.data })
+    } catch(err) {
+        console.log(err);
+    } finally {
+        console.log("Person patch attempt made");
+    }
+  }
+
   render() {
     return (
       <div className="people">
@@ -67,7 +94,7 @@ class People extends React.Component {
           {
             this.state.people && this.state.people.map(person => (
               <li key={person.id}>
-                username: { person.username }: email { person.email } <button onClick={ () => this.handleDelete(person.id) }>Delete Person</button>
+                username: { person.username }: email { person.email } <button onClick={ () => this.handleDelete(person.id) }>Delete Person</button><button onClick={ () => this.selectPerson(person) }>Edit Person</button>
               </li>
             ))
           }
@@ -93,7 +120,30 @@ class People extends React.Component {
           </label>
           <input type="submit" />
         </form>
-      </div>
+
+        <hr/>
+      {
+        <form className="new-person-form">
+          <label>
+            First Name:
+            <input type="text" name="firstname" />
+          </label>
+          <label>
+            Last Name:
+            <input type="text" name="lastname" />
+          </label>
+          <label>
+            Email:
+            <input type="text" name="email" />
+          </label>
+          <label>
+            Username:
+            <input type="text" name="username" />
+          </label>
+          <input type="submit" />
+        </form>
+      }
+    </div>
     )
   }
 }

@@ -10,6 +10,9 @@ class Books extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
+        this.selectBook = this.selectBook.bind(this);
+        this.editBook = this.editBook.bind(this);
+        this.submitEditedBook = this.submitEditedBook.bind(this);
     }
 
     async getAllBooks() {
@@ -59,6 +62,31 @@ class Books extends React.Component {
       console.error(er.message)
     }
   }
+
+  selectBook(selectedBook) {
+    this.seetState({ selectedBook });
+    console.log(selectedBook);
+  }
+
+  editBook(e) {
+    const {name, value} = e.target;
+    this.setState({...this.state, selectedBook: {...this.state.selectedBook, [name]: value}})
+  }
+
+  async submitEditedBook() {
+    try {
+      const editedWine = this.state.selectedBook;
+      const focusWine = BOOKS_URL + editedWine.id;
+      await axios.patch(focusWine, editedWine);
+      const resRefresh = await axios.get(BOOKS_URL);
+      this.setState({ books: resRefresh.data });
+    } catch(err) {
+      console.log(err)
+    } finally {
+      console.log("Book patch attempt made")
+    }
+  }
+
   render() {
     return (
       <div className="books">
@@ -67,7 +95,7 @@ class Books extends React.Component {
           {
             this.state.books && this.state.books.map(book => (
               <li key={book.id}>
-                { book.title }: Author { book.author } <button onClick={ () => this.handleDelete(book.id) }>Delete Book</button>
+                { book.title }: Author { book.author } <button onClick={ () => this.handleDelete(book.id) }>Delete Book</button> <button onClick={ () => this.selectedBook(book) }>Edit Book</button>
               </li>
             ))
           }
@@ -93,7 +121,30 @@ class Books extends React.Component {
           </label>
           <input type="submit" />
         </form>
-      </div>
+
+        <hr/>
+      {
+        this.state.selectedBook && <form className="new-book-form">
+          <label>
+            Book Title:
+            <input type="text" name="title" />
+          </label>
+          <label>
+            Author:
+            <input type="text" name="author" />
+          </label>
+          <label>
+            Release Date:
+            <input type="text" name="release_date" />
+          </label>
+          <label>
+            Image:
+            <input type="text" name="image" />
+          </label>
+          <input type="submit" />
+        </form>
+      }
+    </div>
     )
   }
 }
