@@ -18,7 +18,7 @@ class Wines extends React.Component {
 
   async getWines() {
     try {
-      const res = await axios.get(WINES_URL);
+      const res = await axios.get(`${WINES_URL}?_limit=10`);
       //console.log(res.data)
       this.setState({ wines: res.data })
     } catch(e) {
@@ -102,12 +102,12 @@ class Wines extends React.Component {
   render() {
     return (
       <div className="wines">
-        <ul>
+        <ul className="gridSpacing">
           {/* render info */}
           {
-            this.state.wines && this.state.wines.map(wine => (
-              <li key={ wine.id }id={ wine.id }>
-                { wine.name }: price { wine.price }
+            this.state.wines && this.state.wines.map((wine, index) => (
+              <li className={ `item${index.toString()}` } key={ wine.id } id={ wine.id }><div>
+                { wine.name }: price { wine.price }</div>
                 <button onClick={ () => this.handleDelete(wine.id) }>Delete wine</button>
                 <button onClick={ () => this.selectWine(wine) }>Edit wine</button>
               </li>

@@ -14,6 +14,7 @@ import Wines from "./Wines";
 import People from "./People";
 import Books from "./Books";
 import Home from "./Home";
+import "./App.css";
 
 class App extends React.Component {
   
@@ -45,7 +46,7 @@ class App extends React.Component {
             <Route path="/books">
               <Books />
             </Route>
-            <Route path="/">
+            <Route exact path="/">
               <Home />
             </Route>
           </Switch>

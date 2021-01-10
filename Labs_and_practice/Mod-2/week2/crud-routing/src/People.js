@@ -17,7 +17,7 @@ class People extends React.Component {
 
     async getAllPeople() {
         try {
-            const res = await axios.get(PEOPLE_URL);
+            const res = await axios.get(`${PEOPLE_URL}?_limit=10`);
             this.setState({ people: res.data })
         } catch(err) {
             console.log(err)
@@ -89,12 +89,12 @@ class People extends React.Component {
   render() {
     return (
       <div className="people">
-        <ul>
+        <ul className="gridSpacing">
           {/* render info */}
           {
-            this.state.people && this.state.people.map(person => (
-              <li key={person.id}>
-                username: { person.username }: email { person.email } <button onClick={ () => this.handleDelete(person.id) }>Delete Person</button><button onClick={ () => this.selectPerson(person) }>Edit Person</button>
+            this.state.people && this.state.people.map((person, index) => (
+              <li className={ `item${index.toString()}` } key={ person.id }><div>
+                username: { person.username }: email { person.email }</div> <button onClick={ () => this.handleDelete(person.id) }>Delete Person</button><button onClick={ () => this.selectPerson(person) }>Edit Person</button>
               </li>
             ))
           }

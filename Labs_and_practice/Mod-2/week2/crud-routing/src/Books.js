@@ -17,7 +17,7 @@ class Books extends React.Component {
 
     async getAllBooks() {
         try {
-            const res = await axios.get(BOOKS_URL);
+            const res = await axios.get(`${BOOKS_URL}?_limit=10`);
             this.setState({ books : res.data })
         } catch(err) {
             console.log(err);
@@ -89,12 +89,12 @@ class Books extends React.Component {
   render() {
     return (
       <div className="books">
-        <ul>
+        <ul className="gridSpacing">
           {/* render info */}
           {
-            this.state.books && this.state.books.map(book => (
-              <li key={book.id}>
-                { book.title }: Author { book.author } <button onClick={ () => this.handleDelete(book.id) }>Delete Book</button> <button onClick={ () => this.selectBook(book) }>Edit Book</button>
+            this.state.books && this.state.books.map((book, index) => (
+              <li className={ `item${index.toString()}` } key={ book.id }><div>
+                { book.title }: Author { book.author }</div> <button onClick={ () => this.handleDelete(book.id) }>Delete Book</button> <button onClick={ () => this.selectBook(book) }>Edit Book</button>
               </li>
             ))
           }
