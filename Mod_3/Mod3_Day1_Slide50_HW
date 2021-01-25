@@ -1,0 +1,28 @@
+class Main {
+  public static void main (String[] args){
+    showStars();
+    printAscii();
+  }
+  public static void showStars() {
+    int numOfStars = 6;
+    String stars = "*";
+    for(int i = 7; i > 0; i--) {
+      for(int j = numOfStars; j > 0; j--) {
+        stars = stars + "*";
+      }
+      System.out.println(stars);
+      stars = "*"; 
+      numOfStars--;
+    }
+  }
+  public static void printAscii() {
+      int k = 1;
+      //String stringOfCharacters = (char)1;
+      while(k < 123) {
+      //stringOfCharacters = stringOfCharacters + (char)k;
+      System.out.println((char)k);
+      k++;
+      }
+      //System.out.print(stringOfCharacters);
+  }
+}
