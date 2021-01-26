@@ -10,3 +10,26 @@
 header {
     z-index: 1;
 }
+nav {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+.nautilus_logo {
+    height: 3rem;
+}
+.all_caps {
+    text-transform: uppercase;
+    margin: 1.5rem auto 0rem;
+}
+.black_background {
+    margin: 0rem auto 0rem;
+    padding: 1rem;
+    background: black;
+    color: white;
+}
+.clover_background {
+    background-image: url("assets/clover_card.jpg");
+    background-attachment: fixed;
+    height: 10rem;
+}
