@@ -33,3 +33,37 @@ nav {
     background-attachment: fixed;
     height: 10rem;
 }
+.catalysts {
+    grid-area: catalysts;
+}
+.ai {
+    grid-area: ai;
+    border: solid 0.2rem rgba(140, 140, 140, 0.4);
+    box-shadow: 10px 10px 10px rgba(104, 104, 104, 0.4);
+    position: relative;
+}
+.music {
+    grid-area: music;
+    border: solid 0.2rem rgba(140, 140, 140, 0.4);
+    box-shadow: 10px 10px 10px rgba(104, 104, 104, 0.4);
+    position: relative;
+}
+.art {
+    grid-area: art;
+    border: solid 0.2rem rgba(140, 140, 140, 0.4);
+    box-shadow: 10px 10px 10px rgba(104, 104, 104, 0.4);
+    position: relative;
+}
+.mini_box {
+    position: absolute;
+    padding: 5rem;
+    background: white;
+    color: black;
+}
+.gridSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "catalysts ai ai"
+                         "catalysts music art"
+}
