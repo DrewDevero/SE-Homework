@@ -7,6 +7,10 @@
     display: flex;
     justify-content: center;
 }
+.matches {
+    width: 100%;
+
+}
 header {
     z-index: 1;
 }
@@ -35,22 +39,28 @@ nav {
 }
 .catalysts {
     grid-area: catalysts;
+    height: 673px;
+    padding: 1rem;
+    box-shadow: 10px 10px 10px rgba(104, 104, 104, 0.4);
 }
 .ai {
+    height: 352px;
     grid-area: ai;
-    border: solid 0.2rem rgba(140, 140, 140, 0.4);
+    border: solid 0.1rem rgba(140, 140, 140, 0.4);
     box-shadow: 10px 10px 10px rgba(104, 104, 104, 0.4);
     position: relative;
 }
 .music {
+    height: 323px;
     grid-area: music;
-    border: solid 0.2rem rgba(140, 140, 140, 0.4);
+    border: solid 0.1rem rgba(140, 140, 140, 0.4);
     box-shadow: 10px 10px 10px rgba(104, 104, 104, 0.4);
     position: relative;
 }
 .art {
+    height: 323px;
     grid-area: art;
-    border: solid 0.2rem rgba(140, 140, 140, 0.4);
+    border: solid 0.1rem rgba(140, 140, 140, 0.4);
     box-shadow: 10px 10px 10px rgba(104, 104, 104, 0.4);
     position: relative;
 }
@@ -61,6 +71,7 @@ nav {
     color: black;
 }
 .gridSection {
+    margin: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
