@@ -24,5 +24,8 @@ public class Week2_Day1_MorningLab {
         int second = b;
         first = first / second;
         System.out.println(first);
+        String word = "buddy";
+        char arrString[] = word.toCharArray();
+        System.out.println(arrString[0]);
     }
 }

@@ -16,7 +16,6 @@ public class Calculator {
         subtract(5, '4');
         multiply(5, '4');
         divide(5, '4');
-        match();
         adding(5, '4');
         subtracting(5, '4');
         multiplying(5, '4');
