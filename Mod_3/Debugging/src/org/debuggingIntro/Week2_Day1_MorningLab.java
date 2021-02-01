@@ -1,6 +1,4 @@
-package debuggingIntro;
-
-import java.util.regex.*;
+package org.debuggingIntro;
 
 public class Week2_Day1_MorningLab {
     public static void add(int a, int b) {
@@ -26,16 +24,5 @@ public class Week2_Day1_MorningLab {
         int second = b;
         first = first / second;
         System.out.println(first);
-    }
-    public static void match() {
-        String password = "Ab1";
-        int addOrChange = 0;
-        boolean matches;
-        System.out.println(Pattern.matches("[abc]", "a"));
-        if(Pattern.matches("[abc]", password) == false) {
-            addOrChange++;
-            System.out.println(Pattern.matches("[abc]", password));
-            System.out.println(addOrChange);
-        }
     }
 }

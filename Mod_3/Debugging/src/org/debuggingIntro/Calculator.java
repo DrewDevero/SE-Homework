@@ -1,6 +1,7 @@
-package debuggingIntro;
+package org.debuggingIntro;
 
-import static debuggingIntro.Week2_Day1_MorningLab.*;
+import static org.debuggingIntro.Week2_Day1_MorningLab.*;
+import static org.debuggingIntro.CalcForTesting.*;
 
 public class Calculator {
     public static void main(String[] args) {
@@ -16,5 +17,9 @@ public class Calculator {
         multiply(5, '4');
         divide(5, '4');
         match();
+        adding(5, '4');
+        subtracting(5, '4');
+        multiplying(5, '4');
+        dividing(5, '4');
     }
 }
