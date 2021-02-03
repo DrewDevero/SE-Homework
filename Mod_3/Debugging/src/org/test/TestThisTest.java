@@ -24,4 +24,8 @@ public class TestThisTest {
         testThis.addName("Angel");
         Assert.assertEquals("Angel", testThis.getNamesAtIndex(3));
     }
+    @Test
+    public void testGetNames() {
+        System.out.println(testThis.getNames());
+    }
 }

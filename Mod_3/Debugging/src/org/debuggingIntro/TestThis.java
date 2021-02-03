@@ -3,9 +3,8 @@ package org.debuggingIntro;
 import java.util.*;
 
 public class TestThis {
-    ArrayList<String> names = new ArrayList<String>(Arrays.asList(
-            new String[]{"Mike", "Bairon", "Tony"}
-    ));
+    ArrayList<String> names = new ArrayList<>(Arrays.asList(
+            "Mike", "Bairon", "Tony"));
     public String getNamesAtIndex(int index){
         return names.get(index);
     }
