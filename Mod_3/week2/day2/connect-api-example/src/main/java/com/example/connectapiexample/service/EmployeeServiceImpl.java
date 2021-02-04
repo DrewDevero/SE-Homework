@@ -4,7 +4,6 @@ import com.example.connectapiexample.model.Employees;
 import com.example.connectapiexample.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.*;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -29,5 +28,10 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public HttpStatus deleteEmployee(Long id) {
         return null;
+    }
+
+    @Override
+    public Employees editEmployee(Employees employee) {
+        return employeeRepository.save(employee);
     }
 }

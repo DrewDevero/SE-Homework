@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 @RestController
 @RequestMapping("/employees")
 // http://localhost:8080/employees
+// http://localhost:5432/employees
 public class EmployeeController {
 
     @Autowired
@@ -34,6 +35,11 @@ public class EmployeeController {
     @DeleteMapping("/{id}")
     public HttpStatus deleteEmployeeById(@PathVariable Long id) {
         return employeeService.deleteEmployee(id);
+    }
+
+    @PatchMapping
+    public Employees editEmployee(@RequestBody Employees employee) {
+        return employeeService.editEmployee(employee);
     }
 
 }

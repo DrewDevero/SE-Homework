@@ -7,4 +7,5 @@ public interface EmployeeService {
     Employees findEmployeeById(Long id);
     Employees createEmployee(Employees employee);
     HttpStatus deleteEmployee(Long id);
+    Employees editEmployee(Employees employee);
 }
