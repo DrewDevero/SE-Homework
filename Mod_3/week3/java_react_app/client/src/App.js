@@ -25,6 +25,9 @@ function App() {
             <li>
               <Link to="/create">Create Food</Link>
             </li>
+            <li>
+              <Link to="/update">Update Food</Link>
+            </li>
           </ul>
         </nav>
         {/* A <Switch> looks through its children <Route>s and
@@ -38,6 +41,9 @@ function App() {
           </Route>
           <Route path="/create">
             <Create />
+          </Route>
+          <Route path="/update">
+            <Update />
           </Route>
           <Route path="/">
             <Home />
@@ -139,5 +145,50 @@ function Create() {
     </form>
   )
 }
+
+  function Update() {
+
+      const [part, setPart] = useState(null);
+
+      function handleUpdate(e) {
+        const {name, value} = e.target;
+        setPart({ ...part, [name] : value });
+      }
+
+      function handleSubmit(e) {
+        axios.patch("https://localhost:8080/mexican", part)
+          .then(res => console.log(res))
+          .catch(err => console.error(err));
+      }
+
+      function deleteDish(e) {
+        axios.delete("http://localhost:8080/mexican", part)
+          .then(res => console.log(res))
+          .catch(err => console.error(err));
+  }
+
+      return(
+        <form onChange={ (e) => handleUpdate(e) } onSubmit={ (e) => handleSubmit(e) }>
+          <label>
+            Dish name
+            <input type="text" name="dishName" />
+          </label>
+          <label>
+            vegetarian
+            <input type="text" name="vegetarian" />
+          </label>
+          <label>
+            Spicy
+            <input type="text" name="spicy" />
+          </label>
+          <label>
+            Protein
+            <input type="text" name="protein" />
+          </label>
+          <input type="submit" />
+          <input type="button" value="Delete Dish"onClick={ (e) => deleteDish(e) } />
+        </form>
+      )
+  }
 
 export default App;
