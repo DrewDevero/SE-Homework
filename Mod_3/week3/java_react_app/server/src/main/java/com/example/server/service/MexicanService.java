@@ -5,4 +5,6 @@ import com.example.server.model.Mexican;
 public interface MexicanService {
     Iterable<Mexican> getDishes();
     Mexican createDish(Mexican dish);
+    Mexican updateDish(Mexican dish);
+    Mexican deleteDish(Long id);
 }

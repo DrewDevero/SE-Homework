@@ -22,4 +22,14 @@ public class MexicanServiceImpl implements MexicanService{
     public Mexican createDish(Mexican dish) {
         return mexicanRepository.save(dish);
     }
+
+    @Override
+    public Mexican updateDish(Mexican dish) {
+        return mexicanRepository.save(dish);
+    }
+
+    @Override
+    public Mexican deleteDish(Long id) {
+        return mexicanRepository.delete(id);
+    }
 }
